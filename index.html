@@ -1,19 +1,15 @@
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-
-<!-- START: SEO META TAGS -->
-<meta content="J-TECH LABWORKS - Expert PCB validation, custom cable assembly, troubleshooting, and test fixture design. Trusted. Precise. Efficient." name="description"/>
-<meta content="electronics, PCB testing, soldering, custom cables, test fixtures, lab services, J-TECH LABWORKS" name="keywords"/>
-<meta content="J-TECH LABWORKS" name="author"/>
-<!-- END: SEO META TAGS -->
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>J-TECH LABWORKS</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&amp;display=swap" rel="stylesheet"/>
-<style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="J-TECH LABWORKS - Expert PCB validation, custom cable assembly, troubleshooting, and test fixture design. Trusted. Precise. Efficient."/>
+  <meta name="keywords" content="electronics, PCB testing, soldering, custom cables, test fixtures, lab services, J-TECH LABWORKS"/>
+  <meta name="author" content="J-TECH LABWORKS"/>
+  <title>J-TECH LABWORKS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
+  <style>
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
@@ -22,13 +18,16 @@
     }
     header {
       background-color: #111;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      padding: 2rem 1rem 1rem;
+      text-align: center;
     }
     header img {
-      height: 60px;
+      height: 100px;
+      max-width: 90%;
+      image-rendering: crisp-edges;
+    }
+    nav {
+      margin-top: 1rem;
     }
     nav a {
       margin: 0 1rem;
@@ -103,63 +102,54 @@
   </style>
 </head>
 <body>
+  <header>
+    <img src="logo.png" alt="J-Tech LabWorks Logo"/>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
+  <section class="hero">
+    <h1>Verified. Qualified. Simplified.</h1>
+    <p>Professional electronics testing, soldering, and custom solutions from a fully equipped lab in Monticello, MN.</p>
+    <div class="cta">
+      <a href="#contact">Request a Quote</a>
+    </div>
+  </section>
 
-<header>
-<div style="display: flex; justify-content: center; align-items: center; margin-top: 60px;">
-  <img src="logo.png"
-       alt="J-Tech LabWorks Logo"
-       style="
-         max-width: 100%;
-         height: auto;
-         width: auto;
-         image-rendering: pixelated;
-         image-rendering: crisp-edges;
-         display: block;
-       " />
-<nav>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
-<section class="hero">
-<h1>Verified. Qualified. Simplified.</h1>
-<p>Professional electronics testing, soldering, and custom solutions from a fully equipped lab in Monticello, MN.</p>
-<div class="cta">
-<a href="#contact">Request a Quote</a>
-</div>
-</section>
-<section class="services" id="services">
-<h2>Our Services</h2>
-<ul>
-<li>PCB Testing &amp; Validation</li>
-<li>Custom Cable Assembly</li>
-<li>Soldering &amp; Rework</li>
-<li>Test Fixture Design &amp; Build</li>
-<li>Electrical Troubleshooting</li>
-</ul>
-</section>
-<section id="about">
-<h2>About J-TECH LABWORKS</h2>
-<p>Founded by Jerry Anderson, J-TECH LABWORKS is built on decades of hands-on electronics experience. From PCB validation to precision soldering and fixture design, Jerry brings expert-level service with a commitment to quality and fast turnaround.</p>
-<p>Operating out of a professional-grade home lab, J-TECH offers responsive and cost-effective electronics support to companies of all sizes.</p>
-</section>
-<section id="contact">
-<h2>Contact Us</h2>
-<form class="contact-form">
-<label for="name">Name</label>
-<input id="name" name="name" required="" type="text"/>
-<label for="email">Email</label>
-<input id="email" name="email" required="" type="email"/>
-<label for="message">Message</label>
-<textarea id="message" name="message" required="" rows="5"></textarea>
-<button type="submit">Send Message</button>
-</form>
-</section>
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>PCB Testing &amp; Validation</li>
+      <li>Custom Cable Assembly</li>
+      <li>Soldering &amp; Rework</li>
+      <li>Test Fixture Design &amp; Build</li>
+      <li>Electrical Troubleshooting</li>
+    </ul>
+  </section>
 
+  <section id="about">
+    <h2>About J-TECH LABWORKS</h2>
+    <p>Founded by Jerry Anderson, J-TECH LABWORKS is built on decades of hands-on electronics experience. From PCB validation to precision soldering and fixture design, Jerry brings expert-level service with a commitment to quality and fast turnaround.</p>
+    <p>Operating out of a professional-grade home lab, J-TECH offers responsive and cost-effective electronics support to companies of all sizes.</p>
+  </section>
 
-<footer>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required />
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
     © 2025 J-TECH LABWORKS — All Rights Reserved
   </footer>
 </body>
