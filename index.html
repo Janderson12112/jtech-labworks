@@ -3,13 +3,18 @@
 <html lang="en">
 
 <head>
+     <script>
+  if (location.hostname.includes('github.io')) {
+    location.replace('https://jtechlabworks.com' + location.pathname + location.search + location.hash);
+  }
+</script>
    <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGLNVHR7ED"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){ dataLayer.push(arguments); }
   gtag('js', new Date());
-  gtag('config', 'G-EGLNVHR7ED'', { anonymize_ip: true });
+  gtag('config', 'G-EGLNVHR7ED', { anonymize_ip: true });
 
   // Track key actions
   document.addEventListener('DOMContentLoaded', () => {
@@ -27,11 +32,7 @@
     });
   });
 </script> 
-  <script>
-  if (location.hostname.includes('github.io')) {
-    location.replace('https://jtechlabworks.com' + location.pathname + location.search + location.hash);
-  }
-</script>
+
 <link rel="icon" href="/logo1.png">
 <link rel="apple-touch-icon" href="/logo1.png">
   <meta charset="utf-8"/>
