@@ -1,6 +1,30 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-EGLNVHR7ED'', { anonymize_ip: true });
+
+  // Track key actions
+  document.addEventListener('DOMContentLoaded', () => {
+    // CTA clicks (scroll to contact)
+    document.querySelectorAll('a[href="#contact"]').forEach(el => {
+      el.addEventListener('click', () => gtag('event', 'generate_lead', { method: 'cta_scroll' }));
+    });
+    // Email clicks
+    document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
+      el.addEventListener('click', () => gtag('event', 'contact_email_click'));
+    });
+    // Phone clicks
+    document.querySelectorAll('a[href^="tel:"]').forEach(el => {
+      el.addEventListener('click', () => gtag('event', 'contact_phone_click'));
+    });
+  });
+</script>
 <head>
   <script>
   if (location.hostname.includes('github.io')) {
