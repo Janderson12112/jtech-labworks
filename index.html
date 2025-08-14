@@ -61,22 +61,37 @@
 <!-- Structured data -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"J-Tech LabWorks",
-  "url":"https://jtechlabworks.com/",
-  "logo":"https://jtechlabworks.com/logo1.png",
-  "email":"janderson@jtechlabworks.com",
-  "telephone":"+1-612-227-0195",
-  "contactPoint":[{
-    "@type":"ContactPoint",
-    "contactType":"customer service",
-    "email":"janderson@jtechlabworks.com",
-    "telephone":"+1-612-227-0195",
-    "areaServed":"US"
-  }]
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you take small or rush jobs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — most small projects are completed in 1–3 business days. We’ll confirm scope and timeline up front and include clear pass/fail results with inspection photos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we ship parts in, or is this local only?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Either works. We handle ship-in or local drop-off. For ship-ins, we’ll share packing guidance and include photos in the final report."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will you sign an NDA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We work NDA-friendly by default and can use your standard NDA or provide ours."
+      }
+    }
+  ]
 }
 </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
  <style>
   body {
@@ -182,7 +197,23 @@
     color: #555;
     font-size: 0.9rem;
   }
+  /* FAQ styles */
+  .faq details{
+    background:#0f1114;
+    border:1px solid #1d2a33;
+    border-radius:8px;
+    padding:12px 14px;
+    margin:10px 0;
+  }
+  .faq summary{
+    cursor:pointer;
+    font-weight:700;
+    color:#8fbfd6;
+    outline:none;
+  }
+  .faq p{ margin:10px 0 0; color:#cfd8dc; }
 </style>
+
 
 </head>
 <body>
@@ -228,6 +259,25 @@
     <li>PCB testing &amp; validation, precision solder rework, custom cable assemblies, simple test fixtures</li>
     <li>Common service area: Monticello, Minneapolis–Saint Paul, Maple Grove, Plymouth, St. Cloud, Rogers, Elk River, Buffalo</li>
   </ul>
+</section>
+
+ <section id="mn-faq" class="faq">
+  <h2>Minnesota FAQs</h2>
+
+  <details>
+    <summary>Do you take small or rush jobs?</summary>
+    <p>Yes — most small projects are completed in <strong>1–3 business days</strong>. We’ll confirm scope and timeline up front and include clear pass/fail results with inspection photos.</p>
+  </details>
+
+  <details>
+    <summary>Can we ship parts in, or is this local only?</summary>
+    <p>Either works. We handle <strong>ship-in or local drop-off</strong>. For ship-ins, we’ll share packing guidance and include photos in the final report.</p>
+  </details>
+
+  <details>
+    <summary>Will you sign an NDA?</summary>
+    <p>Absolutely. We work NDA-friendly by default and can use your standard NDA or provide ours.</p>
+  </details>
 </section>
 
   <section id="about">
