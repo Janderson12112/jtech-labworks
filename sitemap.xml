@@ -4,4 +4,21 @@
     <loc>https://jtechlabworks.com/</loc>
     <lastmod>2025-08-09</lastmod>
   </url>
+
+  <!-- New MN landing pages -->
+  <url>
+    <loc>https://jtechlabworks.com/pcb-testing-minnesota.html</loc>
+    <lastmod>2025-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://jtechlabworks.com/custom-cable-assembly-minnesota.html</loc>
+    <lastmod>2025-08-14</lastmod>
+  </url>
+
+  <!-- (Optional) Include your PDF so Google can discover it -->
+  <url>
+    <loc>https://jtechlabworks.com/jtech-labworks-capabilities-onepager.pdf</loc>
+    <lastmod>2025-08-09</lastmod>
+  </url>
 </urlset>
+
