@@ -8,9 +8,10 @@
     location.replace('https://jtechlabworks.com' + location.pathname + location.search + location.hash);
   }
 </script>
-   <!-- Google Analytics 4 -->
+<!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGLNVHR7ED"></script>
 <script>
+  // GA4 init
   window.dataLayer = window.dataLayer || [];
   function gtag(){ dataLayer.push(arguments); }
   gtag('js', new Date());
@@ -20,18 +21,38 @@
   document.addEventListener('DOMContentLoaded', () => {
     // CTA clicks (scroll to contact)
     document.querySelectorAll('a[href="#contact"]').forEach(el => {
-      el.addEventListener('click', () => gtag('event', 'generate_lead', { method: 'cta_scroll' }));
+      el.addEventListener('click', () => {
+        gtag('event', 'generate_lead', { method: 'cta_scroll' });
+      });
     });
+
     // Email clicks
     document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
-      el.addEventListener('click', () => gtag('event', 'contact_email_click'));
+      el.addEventListener('click', () => {
+        gtag('event', 'contact_email_click');
+      });
     });
+
     // Phone clicks
     document.querySelectorAll('a[href^="tel:"]').forEach(el => {
-      el.addEventListener('click', () => gtag('event', 'contact_phone_click'));
+      el.addEventListener('click', () => {
+        gtag('event', 'contact_phone_click');
+      });
+    });
+
+    // Explicit event for the Capabilities PDF
+    document.querySelectorAll('a[href*="jtech-labworks-capabilities-onepager.pdf"]').forEach(el => {
+      el.addEventListener('click', () => {
+        gtag('event', 'capabilities_pdf_download', {
+          link_url: el.href,
+          file_name: 'jtech-labworks-capabilities-onepager.pdf'
+        });
+      });
     });
   });
-</script> 
+</script>
+
+
 
 <link rel="icon" href="/logo1.png">
 <link rel="apple-touch-icon" href="/logo1.png">
