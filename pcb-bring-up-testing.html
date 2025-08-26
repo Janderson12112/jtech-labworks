@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Redirect github.io to custom domain -->
+  <script>
+    if (location.hostname.includes('github.io')) {
+      location.replace('https://jtechlabworks.com' + location.pathname + location.search + location.hash);
+    }
+  </script>
+  
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGLNVHR7ED"></script>
+  <script>
+    // GA4 init
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-EGLNVHR7ED', { anonymize_ip: true });
+
+    // Track key actions on this landing page
+    document.addEventListener('DOMContentLoaded', () => {
+      // CTA clicks (scroll to contact)
+      document.querySelectorAll('a[href="#contact"]').forEach(el => {
+        el.addEventListener('click', () => {
+          gtag('event', 'generate_lead', { method: 'cta_scroll_landing' });
+        });
+      });
+      // Email clicks
+      document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
+        el.addEventListener('click', () => {
+          gtag('event', 'contact_email_click');
+        });
+      });
+      // Phone clicks
+      document.querySelectorAll('a[href^="tel:"]').forEach(el => {
+        el.addEventListener('click', () => {
+          gtag('event', 'contact_phone_click');
+        });
+      });
+    });
+  </script>
+
+  <link rel="icon" href="/logo1.png">
+  <link rel="apple-touch-icon" href="/logo1.png">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Minnesota PCB bring-up & test executed to your procedure: safe power-on, rails validation with scope screenshots, console/bus checks, and a clear 1-page results report. 1–3 day turnaround. NDA-friendly."/>
+  <meta name="author" content="J-TECH LABWORKS"/>
+
+  <title>PCB Bring-Up & Test — Minnesota | J-Tech LabWorks</title>
+  <link rel="canonical" href="https://jtechlabworks.com/pcb-bring-up-testing.html">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PCB Bring-Up & Test — Minnesota | J-Tech LabWorks">
+  <meta property="og:description" content="We execute your test procedure. Safe power-on, rails validation, console/bus checks, and a clear 1-page report. 1–3 day turnaround. NDA-friendly.">
+  <meta property="og:url" content="https://jtechlabworks.com/pcb-bring-up-testing.html">
+  <meta property="og:image" content="https://jtechlabworks.com/logo1.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PCB Bring-Up & Test — Minnesota | J-Tech LabWorks">
+  <meta name="twitter:description" content="We execute your test procedure. Safe power-on, rails validation, console/bus checks, and a clear 1-page report. 1–3 day turnaround. NDA-friendly.">
+  <meta name="twitter:image" content="https://jtechlabworks.com/logo1.png">
+
+  <!-- Structured data: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "PCB Bring-Up & Test",
+    "serviceType": "Electronics testing and validation",
+    "provider": {
+      "@type": "Organization",
+      "name": "J-Tech LabWorks",
+      "url": "https://jtechlabworks.com/",
+      "logo": "https://jtechlabworks.com/logo1.png",
+      "email": "janderson@jtechlabworks.com",
+      "telephone": "+1-612-227-0195"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Minnesota"
+    },
+    "audience": {"@type":"BusinessAudience"},
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "PCB bring-up packages",
+      "itemListElement": [
+        {"@type":"Offer", "name":"Pre-Power Review"},
+        {"@type":"Offer", "name":"Safe Power-On & Rails Validation"},
+        {"@type":"Offer", "name":"Execute Client Test Procedure"}
+      ]
+    }
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
+  <style>
+    body { margin:0; font-family:'Orbitron', sans-serif; background:#0d0d0d; color:#fff; }
+    header { background:#111; padding:1.25rem; text-align:center; }
+    header img { height:80px; image-rendering:crisp-edges; }
+    nav a { margin:0 0.75rem; color:#00aaff; text-decoration:none; font-weight:700; }
+    .hero { padding:3rem 1.5rem; text-align:center; background:#121212; }
+    .hero h1 { font-size:2.6rem; color:#00aaff; margin:0; }
+    .tagline { margin-top:.5rem; font-size:1rem; letter-spacing:.04em; color:#8fbfd6; }
+    .hero p { font-size:1.1rem; color:#aaa; max-width:900px; margin: 0.75rem auto 0; }
+
+    .btn { display:inline-block; background:#00aaff; color:#000; text-decoration:none; font-weight:700; padding:12px 16px; border-radius:8px; line-height:1.1; box-shadow:0 0 0 1px #00aaff inset; }
+    .btn--ghost { background:transparent; color:#00aaff; border:1px solid #00aaff; }
+    .btn--ghost:hover { background:rgba(0,170,255,.10); }
+    .cta { margin-top:1.25rem; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+    section { padding:2.5rem 1.5rem; max-width:1100px; margin:0 auto; }
+    h2 { color:#00aaff; margin-bottom:0.75rem; }
+    ul { padding-left:1.2rem; }
+
+    .grid { display:grid; gap:14px; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); }
+    .card { background:#0f1114; border:1px solid #1d2a33; border-radius:10px; padding:16px; }
+
+    /* FAQ */
+    .faq details{ background:#0f1114; border:1px solid #1d2a33; border-radius:8px; padding:12px 14px; margin:10px 0; }
+    .faq summary{ cursor:pointer; font-weight:700; color:#8fbfd6; outline:none; }
+    .faq p{ margin:10px 0 0; color:#cfd8dc; }
+
+    footer { background:#111; padding:2rem; text-align:center; color:#555; font-size:.9rem; }
+    @media (max-width:600px){ .hero h1{ font-size:2rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/" aria-label="J-Tech Home"><img src="/logo1.png" alt="J-Tech LabWorks Logo"></a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>PCB Bring-Up & Test — Minnesota</h1>
+    <p class="tagline">We execute <strong>your test procedure</strong>. Safe power-on, rails validation, console/bus checks, and a clear 1-page report.</p>
+    <p>Typical turn: <strong>1–3 business days</strong>. NDA-friendly. Current-limited power-up, rail measurements with scope screenshots, UART/I²C/SPI checks, firmware flash/provisioning, and photo evidence throughout.</p>
+    <div class="cta">
+      <a class="btn btn--ghost" href="#contact">Request a Quote</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid">
+      <div class="card">
+        <h2>What We Do</h2>
+        <ul>
+          <li>Safe power-on & rails validation (scope screenshots)</li>
+          <li>Execute client TP exactly as written</li>
+          <li>Digital bring-up: clocks, UART console, I²C/SPI scan</li>
+          <li>Firmware flash/provisioning (ST-Link/J-Link/DFU)</li>
+          <li>Simple fixtures/scripts for PASS/FAIL</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>What We Need From You</h2>
+        <ul>
+          <li>Test Procedure with steps, numeric limits, pass/fail criteria</li>
+          <li>Schematics (PDF), power tree/rails table</li>
+          <li>Programming image + method; jumpers/boot settings</li>
+          <li>Fixtures/adapters or connector pinouts</li>
+          <li>Qty/serials & return instructions</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Turn & Pricing</h2>
+        <ul>
+          <li>Typical turn: 1–3 business days</li>
+          <li>Minimum/Setup: $200</li>
+          <li>Half-day (≤4 hrs): $500 · Full day (≤8 hrs): $1,000</li>
+          <li>Expedite (<24h start): +25%</li>
+          <li>Materials: client-supplied preferred (or at cost +10%)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>FAQs</h2>
+    <details>
+      <summary>Can you run my exact test procedure?</summary>
+      <p>Yes. We execute your TP verbatim and record evidence (scope screenshots, logs, photos). If anything is ambiguous, we pause and ask for clarification.</p>
+    </details>
+    <details>
+      <summary>What are your safety limits?</summary>
+      <p>Bring-up is limited to ≤ 24 VDC (typical ≤3 A). We don’t perform battery-pack testing or hipot unless your TP provides explicit, approved steps.</p>
+    </details>
+    <details>
+      <summary>What do I get back?</summary>
+      <p>A 1-page results summary PDF, plus a ZIP of scope PNGs, logs/CSVs, and photos. We can ship your boards back or arrange local pickup.</p>
+    </details>
+  </section>
+
+  <section id="contact">
+    <h2 style="text-align:center;">Request a Quote</h2>
+    <p style="text-align:center; color:#aaa; max-width:800px; margin:6px auto 14px;">Send your TP and files using the form below, or email <a href="mailto:janderson@jtechlabworks.com" style="color:#00aaff;">janderson@jtechlabworks.com</a>.</p>
+    <iframe
+      id="zoho-contact-form"
+      aria-label="Jtech contact"
+      frameborder="0"
+      style="height:560px;width:100%;border:none;"
+      src="https://forms.zohopublic.com/jandersonjtechl1/form/Jtechcontact/formperma/v1rXdI9M3C0pYvaH3_oLJiUUxwU3YOiJ0aeAENTI2gQ">
+    </iframe>
+    <script>
+      // Auto-resize Zoho iframe
+      window.addEventListener('message', function(event){
+        if (event.origin.includes('zoho.com') && event.data.height) {
+          document.getElementById('zoho-contact-form').style.height = event.data.height + 'px';
+        }
+      });
+    </script>
+  </section>
+
+  <footer>
+    © 2025 J-TECH LABWORKS — All Rights Reserved · <a href="/" style="color:#00aaff">Home</a>
+  </footer>
+</body>
+</html>
