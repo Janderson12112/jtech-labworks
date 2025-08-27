@@ -37,6 +37,14 @@
           gtag('event', 'contact_phone_click');
         });
       });
+     // Bring-Up page CTA tracking
+const bringUpBtn = document.getElementById('bringup_cta');
+if (bringUpBtn) {
+  bringUpBtn.addEventListener('click', () => {
+    gtag('event', 'bringup_cta_click', { page: 'pcb-bring-up-testing' });
+  });
+}
+ 
     });
   </script>
 
@@ -142,7 +150,11 @@
     <p class="tagline">We execute <strong>your test procedure</strong>. Safe power-on, rails validation, console/bus checks, and a clear 1-page report.</p>
     <p>Typical turn: <strong>1–3 business days</strong>. NDA-friendly. Current-limited power-up, rail measurements with scope screenshots, UART/I²C/SPI checks, firmware flash/provisioning, and photo evidence throughout.</p>
     <div class="cta">
-      <a class="btn btn--ghost" href="#contact">Request a Quote</a>
+     <a class="btn btn--ghost" id="bringup_cta"
+   href="/pcb-bring-up-testing.html?utm_source=bringup&utm_medium=cta&utm_campaign=services#contact">
+  Request a Quote
+</a>
+
     </div>
   </section>
 
@@ -200,13 +212,14 @@
   <section id="contact">
     <h2 style="text-align:center;">Request a Quote</h2>
     <p style="text-align:center; color:#aaa; max-width:800px; margin:6px auto 14px;">Send your TP and files using the form below, or email <a href="mailto:janderson@jtechlabworks.com" style="color:#00aaff;">janderson@jtechlabworks.com</a>.</p>
-    <iframe
-      id="zoho-contact-form"
-      aria-label="Jtech contact"
-      frameborder="0"
-      style="height:560px;width:100%;border:none;"
-      src="https://forms.zohopublic.com/jandersonjtechl1/form/Jtechcontact/formperma/v1rXdI9M3C0pYvaH3_oLJiUUxwU3YOiJ0aeAENTI2gQ">
-    </iframe>
+<iframe
+  id="zoho-contact-form"
+  aria-label="Jtech contact"
+  frameborder="0"
+  style="height:560px;width:100%;border:none;"
+  src="https://forms.zohopublic.com/jandersonjtechl1/form/Jtechcontact/formperma/v1rXdI9M3C0pYvaH3_oLJiUUxwU3YOiJ0aeAENTI2gQ?utm_source=bringup&utm_medium=form&utm_campaign=services">
+</iframe>
+
     <script>
       // Auto-resize Zoho iframe
       window.addEventListener('message', function(event){
@@ -219,6 +232,8 @@
 
   <footer>
     © 2025 J-TECH LABWORKS — All Rights Reserved · <a href="/" style="color:#00aaff">Home</a>
+    · <a href="/pcb-bring-up-testing.html" style="color:#00aaff">PCB Bring-Up &amp; Test</a>
+
   </footer>
 </body>
 </html>
