@@ -37,13 +37,24 @@
           gtag('event', 'contact_phone_click');
         });
       });
-     // Bring-Up page CTA tracking
+     // Bring-Up page CTA tracking (with event_callback so the hit sends before nav)
 const bringUpBtn = document.getElementById('bringup_cta');
 if (bringUpBtn) {
-  bringUpBtn.addEventListener('click', () => {
-    gtag('event', 'bringup_cta_click', { page: 'pcb-bring-up-testing' });
+  bringUpBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // hold navigation briefly
+    const target = bringUpBtn.href;
+
+    // send GA event and navigate when GA confirms
+    gtag('event', 'bringup_cta_click', {
+      page: 'pcb-bring-up-testing',
+      event_callback: () => { window.location.href = target; }
+    });
+
+    // fail-safe: navigate anyway after 700ms in case callback doesn't fire
+    setTimeout(() => { window.location.href = target; }, 700);
   });
 }
+
  
     });
   </script>
@@ -73,6 +84,21 @@ if (bringUpBtn) {
   <meta name="twitter:image" content="https://jtechlabworks.com/logo1.png">
 
   <!-- Structured data: Service -->
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Can you run my exact test procedure?",
+     "acceptedAnswer":{"@type":"Answer","text":"Yes. We execute your TP verbatim and record evidence (scope screenshots, logs, photos). If anything is ambiguous, we pause and ask for clarification."}},
+    {"@type":"Question","name":"What are your safety limits?",
+     "acceptedAnswer":{"@type":"Answer","text":"Bring-up is limited to ≤ 24 VDC (typical ≤3 A). We don’t perform battery-pack testing or hipot unless your TP provides explicit, approved steps."}},
+    {"@type":"Question","name":"What do I get back?",
+     "acceptedAnswer":{"@type":"Answer","text":"A 1-page results summary PDF, plus a ZIP of scope PNGs, logs/CSVs, and photos. We can ship your boards back or arrange local pickup."}}
+  ]
+}
+</script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
