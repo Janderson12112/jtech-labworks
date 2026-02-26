@@ -228,7 +228,13 @@ header, h1, h2, nav a, .tagline {
 
   /* ============================================ */
 
-  section { padding: 3rem 2rem; }
+  section {
+  padding: 4rem 2rem;
+}
+
+section + section {
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
   h2 { color: #00aaff; margin-bottom: 1rem; }
   .services ul { list-style: square; padding-left: 1.5rem; }
   .contact-form label { display: block; margin-top: 1rem; }
