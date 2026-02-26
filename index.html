@@ -177,17 +177,24 @@ header, h1, h2, nav a, .tagline {
 
 
   /* === NEW: button classes for better mobile behavior === */
-  .btn{
-    display:inline-block;
-    background:#00aaff;
-    color:#000;
-    text-decoration:none;
-    font-weight:700;
-    padding:12px 16px;
-    border-radius:8px;
-    line-height:1.1;
-    box-shadow:0 0 0 1px #00aaff inset;
-  }
+.btn{
+  display:inline-block;
+  background:#00aaff;
+  color:#000;
+  text-decoration:none;
+  font-weight:700;
+  padding:12px 16px;
+  border-radius:8px;
+  line-height:1.1;
+  box-shadow:0 0 0 1px #00aaff inset;
+
+  /* polish */
+  transition: background .15s ease, color .15s ease, transform .05s ease;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+}
 .btn--ghost{
   background: transparent;
   color: #00aaff;
@@ -208,7 +215,9 @@ header, h1, h2, nav a, .tagline {
   color:#8fbfd6;
 }
 
-.btn--ghost:hover { background: rgba(0,170,255,.10); }
+.btn--ghost:hover{
+  background: rgba(0,170,255,.12) !important;
+}
 
 .hero .cta{
   display: flex;
