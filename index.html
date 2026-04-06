@@ -371,13 +371,32 @@ the focus is always the same — clear answers and a path forward.
   <p>
     Simple system, but the same approach I use when troubleshooting real hardware — capture the signals, correlate behavior, and understand what the system is actually doing.
   </p>
-     <ul>
-  <li>Captured digital input trigger and correlated system response timing</li>
-  <li>Measured delay from input event to speaker output (~976 ms)</li>
-  <li>Observed transient behavior during output activation</li>
-  <li>Captured SPI communication between microcontroller and TFT display</li>
-  <li>Isolated a single display transaction (~400 µs) and verified SCK, MOSI, CS, and DC behavior</li>
+   <ul>
+<li>Captured hall sensor trigger and correlated full system response</li>
+<li>Measured end-to-end response delay (~976 ms) between input and output</li>
+<li>Identified transient behavior during speaker activation</li>
+<li>Captured and analyzed SPI communication to TFT display</li>
+<li>Verified timing and integrity of SCK, MOSI, CS, and DC signals (~400 µs transaction)</li>
 </ul>
+
+<div style="margin-top: 1.5rem;">
+  <img src="switch_timing.png" alt="Oscilloscope capture showing hall sensor input and speaker output timing" style="max-width:100%; border-radius:8px;">
+  <p style="opacity:0.7; font-size:0.9rem;">
+    Hall sensor input vs speaker output — measured system response delay ≈ 976 ms
+  </p>
+</div>
+
+<div style="margin-top: 2rem;">
+  <img src="TFT1png.png" alt="SPI communication capture showing SCK, MOSI, CS, and DC signals" style="max-width:100%; border-radius:8px;">
+  <p style="opacity:0.7; font-size:0.9rem;">
+    SPI display communication — SCK (clock), MOSI (data), CS (chip select), and DC (command/data) during display update (~400 µs)
+  </p>
+</div>
+
+<p style="margin-top:1.5rem; font-weight:bold;">
+This is the same approach I use to diagnose real system issues — isolate signals, verify behavior, and remove guesswork.
+</p>
+
 </section>
 
  <section id="mn-service">
