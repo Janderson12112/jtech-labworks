@@ -366,19 +366,18 @@ the focus is always the same — clear answers and a path forward.
 </section>
 
 <section id="examples">
-  <h2>Example Work</h2>
+  <h2>Signal Capture &amp; System Behavior Analysis</h2>
 
-  <p><strong>Intermittent Reset Issue</strong><br>
-  Device reset after extended runtime. Captured power rail dip during load event.<br>
-  → Identified supply path issue and recommended corrective action.</p>
-
-  <p><strong>Prototype Bring-Up</strong><br>
-  New board wouldn’t boot. Verified rails and found unstable regulator behavior.<br>
-  → Identified primary blocker and next steps for engineering team.</p>
-
-  <p><strong>Communication Failure</strong><br>
-  Sensor not responding over I2C. Captured bus activity and isolated failure point.<br>
-  → Determined whether issue was hardware or firmware related.</p>
+  <p>
+    Simple system, but the same approach I use when troubleshooting real hardware — capture the signals, correlate behavior, and understand what the system is actually doing.
+  </p>
+     <ul>
+  <li>Captured digital input trigger and correlated system response timing</li>
+  <li>Measured delay from input event to speaker output (~976 ms)</li>
+  <li>Observed transient behavior during output activation</li>
+  <li>Captured SPI communication between microcontroller and TFT display</li>
+  <li>Isolated a single display transaction (~400 µs) and verified SCK, MOSI, CS, and DC behavior</li>
+</ul>
 </section>
 
  <section id="mn-service">
