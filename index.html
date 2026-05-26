@@ -3,297 +3,292 @@
 <html lang="en">
 
 <head>
-     <script>
-  if (location.hostname.includes('github.io')) {
-    location.replace('https://jtechlabworks.com' + location.pathname + location.search + location.hash);
-  }
-</script>
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGLNVHR7ED"></script>
-<script>
-  // GA4 init
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-EGLNVHR7ED', { anonymize_ip: true });
+  <script>
+    if (location.hostname.includes('github.io')) {
+      location.replace('https://jtechlabworks.com' + location.pathname + location.search + location.hash);
+    }
+  </script>
 
-  // Track key actions
-  document.addEventListener('DOMContentLoaded', () => {
-    // CTA clicks (scroll to contact)
-    document.querySelectorAll('a[href="#contact"]').forEach(el => {
-      el.addEventListener('click', () => {
-        gtag('event', 'generate_lead', { method: 'cta_scroll' });
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGLNVHR7ED"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-EGLNVHR7ED', { anonymize_ip: true });
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href="#contact"]').forEach(el => {
+        el.addEventListener('click', () => gtag('event', 'generate_lead', { method: 'cta_scroll' }));
       });
-    });
-
-    // Email clicks
-    document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
-      el.addEventListener('click', () => {
-        gtag('event', 'contact_email_click');
+      document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
+        el.addEventListener('click', () => gtag('event', 'contact_email_click'));
       });
-    });
-
-    // Phone clicks
-    document.querySelectorAll('a[href^="tel:"]').forEach(el => {
-      el.addEventListener('click', () => {
-        gtag('event', 'contact_phone_click');
+      document.querySelectorAll('a[href^="tel:"]').forEach(el => {
+        el.addEventListener('click', () => gtag('event', 'contact_phone_click'));
       });
-    });
-
-    // Explicit event for the Capabilities PDF
-    document.querySelectorAll('a[href*="jtech-labworks-capabilities-onepager.pdf"]').forEach(el => {
-      el.addEventListener('click', () => {
-        gtag('event', 'capabilities_pdf_download', {
+      document.querySelectorAll('a[href*="jtech-labworks-capabilities-onepager.pdf"]').forEach(el => {
+        el.addEventListener('click', () => gtag('event', 'capabilities_pdf_download', {
           link_url: el.href,
           file_name: 'jtech-labworks-capabilities-onepager.pdf'
-        });
+        }));
       });
     });
-  });
-</script>
+  </script>
 
-
-
-<link rel="icon" href="/logo1.png">
-<link rel="apple-touch-icon" href="/logo1.png">
+  <link rel="icon" href="/logo1.png">
+  <link rel="apple-touch-icon" href="/logo1.png">
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Minnesota electronics lab for PCB testing & validation, precision solder rework, custom cable assemblies, and simple test fixtures. Fast 1–3 day turnaround. NDA-friendly. Ship-in or local drop-off.">
-  <meta name="keywords" content="electronics, PCB testing, soldering, custom cables, test fixtures, lab services, J-TECH LABWORKS"/>
+  <meta name="description" content="Contract electronics lab offering PCB bring-up, failure analysis, embedded debug, signal and power integrity, rework, and NPI support. Ship-in model, nationwide. NDA-friendly. Fast turnaround.">
+  <meta name="keywords" content="contract electronics lab, PCB bring-up, failure analysis, embedded debug, signal integrity, power integrity, rework, NPI support, contract lab, electronics troubleshooting"/>
   <meta name="author" content="J-TECH LABWORKS"/>
 
-  <title>J-Tech LabWorks | PCB Testing, Solder Rework & Custom Cables — Minnesota</title>
+  <title>J-Tech LabWorks | Contract Electronics Lab — PCB Bring-Up, Failure Analysis & Embedded Debug</title>
   <link rel="canonical" href="https://jtechlabworks.com/">
   <meta name="robots" content="index,follow">
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="J-Tech LabWorks | PCB Testing, Solder Rework & Custom Cables — Minnesota">
-<meta property="og:description" content="Minnesota electronics lab for PCB testing & validation, precision solder rework, custom cable assemblies, and simple test fixtures. Fast 1–3 day turnaround. NDA-friendly. Ship-in or local drop-off.">
-<meta property="og:url" content="https://jtechlabworks.com/">
-<meta property="og:image" content="https://jtechlabworks.com/logo1.png">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="J-Tech LabWorks | Contract Electronics Lab — PCB Bring-Up, Failure Analysis & Embedded Debug">
+  <meta property="og:description" content="Contract electronics lab offering PCB bring-up, failure analysis, embedded debug, signal and power integrity, rework, and NPI support. Ship-in model, nationwide. NDA-friendly.">
+  <meta property="og:url" content="https://jtechlabworks.com/">
+  <meta property="og:image" content="https://jtechlabworks.com/logo1.png">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="J-Tech LabWorks | PCB Testing, Solder Rework & Custom Cables — Minnesota">
-<meta name="twitter:description" content="Minnesota electronics lab for PCB testing & validation, precision solder rework, custom cable assemblies, and simple test fixtures. Fast 1–3 day turnaround. NDA-friendly. Ship-in or local drop-off.">
-<meta name="twitter:image" content="https://jtechlabworks.com/logo1.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="J-Tech LabWorks | Contract Electronics Lab — PCB Bring-Up, Failure Analysis & Embedded Debug">
+  <meta name="twitter:description" content="Contract electronics lab offering PCB bring-up, failure analysis, embedded debug, signal and power integrity, rework, and NPI support. Ship-in model, nationwide. NDA-friendly.">
+  <meta name="twitter:image" content="https://jtechlabworks.com/logo1.png">
 
-<!-- Structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do you take small or rush jobs?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — most small projects are completed in 1–3 business days. We’ll confirm scope and timeline up front and include clear pass/fail results with inspection photos."
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you work with companies outside your area?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. J-Tech LabWorks operates on a ship-in model and works with engineering teams nationwide. You ship boards and documentation, we do the work, and results come back fast."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you take small or rush jobs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — most small projects are completed in 1–3 business days. We'll confirm scope and timeline up front and include clear results and documentation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will you sign an NDA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. We work NDA-friendly by default and can use your standard NDA or provide ours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the ship-in model work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You ship boards along with relevant documentation — schematics, complaint description, test procedures for validation work. We perform the hands-on work and return results with clear documentation and photos."
+        }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Can we ship parts in, or is this local only?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Either works. We handle ship-in or local drop-off. For ship-ins, we’ll share packing guidance and include photos in the final report."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will you sign an NDA?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Absolutely. We work NDA-friendly by default and can use your standard NDA or provide ours."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"J-Tech LabWorks",
-  "url":"https://jtechlabworks.com/",
-  "logo":"https://jtechlabworks.com/logo1.png",
-  "email":"janderson@jtechlabworks.com",
-  "telephone":"+1-612-227-0195",
-  "contactPoint":[{
-    "@type":"ContactPoint",
-    "contactType":"customer service",
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"J-Tech LabWorks",
+    "url":"https://jtechlabworks.com/",
+    "logo":"https://jtechlabworks.com/logo1.png",
     "email":"janderson@jtechlabworks.com",
     "telephone":"+1-612-227-0195",
-    "areaServed":"US"
-  }]
-}
-</script>
+    "areaServed": "US",
+    "contactPoint":[{
+      "@type":"ContactPoint",
+      "contactType":"customer service",
+      "email":"janderson@jtechlabworks.com",
+      "telephone":"+1-612-227-0195",
+      "areaServed":"US"
+    }]
+  }
+  </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
- <style>
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  background-color: #0d0d0d;
-  color: #fff;
-  line-height: 1.6;
-}
-
-header, h1, h2, nav a, .tagline {
-  font-family: 'Orbitron', sans-serif;
-}
-  }
-  header {
-    background-color: #111;
-    padding: 2rem 1rem 1rem;
-    text-align: center;
-  }
-  header img {
-    height: 100px;
-    max-width: 90%;
-    image-rendering: crisp-edges;
-  }
-  nav { margin-top: 1rem; }
-  nav a {
-    margin: 0 1rem;
-    color: #00aaff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .hero { padding: 4rem 2rem; text-align: center; background-color: #121212; }
-.hero h1 { font-size: 2.4rem; color: #00aaff; line-height: 1.15; margin: 0; }
-.hero p { font-size: 1.1rem; margin-top: 1rem; color: #aaa; max-width: 900px; margin-left: auto; margin-right: auto; }
-
-  .cta { margin-top: 2rem; }
-  .cta a:not(.btn) {
-  padding: 0.75rem 1.5rem;
-  background-color: #00aaff;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-}
-
-
-  /* === NEW: button classes for better mobile behavior === */
-.btn{
-  display:inline-block;
-  background:#00aaff;
-  color:#000;
-  text-decoration:none;
-  font-weight:700;
-  padding:12px 16px;
-  border-radius:8px;
-  line-height:1.1;
-  box-shadow:0 0 0 1px #00aaff inset;
-
-  /* polish */
-  transition: background .15s ease, color .15s ease, transform .05s ease;
-}
-
-.btn:hover{
-  transform: translateY(-1px);
-}
-.btn--ghost{
-  background: transparent;
-  color: #00aaff;
-  border: 1px solid #00aaff;
-}
-
-/* Make the outline (ghost) button win over the older .cta a rule */
-.cta a.btn--ghost{
-  background: transparent !important;
-  color: #00aaff !important;
-  border: 1px solid #00aaff;
-  white-space: nowrap;
-}
-.tagline{
-  margin-top:.5rem;
-  font-size:1rem;
-  letter-spacing:.04em;
-  color:#8fbfd6;
-}
-
-.btn--ghost:hover{
-  background: rgba(0,170,255,.12) !important;
-}
-
-.hero .cta{
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-  /* ============================================ */
-
-  section {
-  padding: 4rem 2rem;
-  max-width: 1000px;
-  margin: 0 auto;     
-}
-
-section + section {
-  border-top: 1px solid rgba(255,255,255,0.04);
-}
- h2 {
-  color: #00aaff;
-  margin-bottom: 1rem;
-  letter-spacing: 0.5px;
-}
-  .services ul { list-style: square; padding-left: 1.5rem; }
-  .contact-form label { display: block; margin-top: 1rem; }
-  .contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border: none;
-    border-radius: 4px;
-  }
-  .contact-form button {
-    margin-top: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #00aaff;
-    border: none;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 4px;
-  }
- #problems,
-#examples {
-  background-color: #0f1114;
-  border-radius: 8px;
-  padding: 2rem;
-}
-
-footer {
-  background-color: #111;
-  padding: 2rem;
-  text-align: center;
-  color: #555;
-  font-size: 0.9rem;
-}
-  /* FAQ styles */
-  .faq details{
-    background:#0f1114;
-    border:1px solid #1d2a33;
-    border-radius:8px;
-    padding:12px 14px;
-    margin:10px 0;
-  }
-  .faq summary{
-    cursor:pointer;
-    font-weight:700;
-    color:#8fbfd6;
-    outline:none;
-  }
-  .faq p{ margin:10px 0 0; color:#cfd8dc; }
-</style>
-
-
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header, h1, h2, nav a, .tagline {
+      font-family: 'Orbitron', sans-serif;
+    }
+    header {
+      background-color: #111;
+      padding: 2rem 1rem 1rem;
+      text-align: center;
+    }
+    header img {
+      height: 100px;
+      max-width: 90%;
+      image-rendering: crisp-edges;
+    }
+    nav { margin-top: 1rem; }
+    nav a {
+      margin: 0 1rem;
+      color: #00aaff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero { padding: 4rem 2rem; text-align: center; background-color: #121212; }
+    .hero h1 { font-size: 2.4rem; color: #00aaff; line-height: 1.15; margin: 0; }
+    .hero p { font-size: 1.1rem; margin-top: 1rem; color: #aaa; max-width: 900px; margin-left: auto; margin-right: auto; }
+    .cta { margin-top: 2rem; }
+    .btn {
+      display: inline-block;
+      background: #00aaff;
+      color: #000;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 16px;
+      border-radius: 8px;
+      line-height: 1.1;
+      box-shadow: 0 0 0 1px #00aaff inset;
+      transition: background .15s ease, color .15s ease, transform .05s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn--ghost {
+      background: transparent;
+      color: #00aaff;
+      border: 1px solid #00aaff;
+    }
+    .cta a.btn--ghost {
+      background: transparent !important;
+      color: #00aaff !important;
+      border: 1px solid #00aaff;
+      white-space: nowrap;
+    }
+    .tagline {
+      margin-top: .5rem;
+      font-size: 1rem;
+      letter-spacing: .04em;
+      color: #8fbfd6;
+    }
+    .btn--ghost:hover { background: rgba(0,170,255,.12) !important; }
+    .hero .cta {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .nationwide-badge {
+      display: inline-block;
+      background: rgba(0,170,255,0.1);
+      border: 1px solid rgba(0,170,255,0.3);
+      color: #00aaff;
+      font-size: 0.85rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-top: 1rem;
+      letter-spacing: 0.05em;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    section + section {
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+    h2 {
+      color: #00aaff;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+    .services ul { list-style: square; padding-left: 1.5rem; }
+    #problems, #examples {
+      background-color: #0f1114;
+      border-radius: 8px;
+      padding: 2rem;
+    }
+    footer {
+      background-color: #111;
+      padding: 2rem;
+      text-align: center;
+      color: #555;
+      font-size: 0.9rem;
+    }
+    .faq details {
+      background: #0f1114;
+      border: 1px solid #1d2a33;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin: 10px 0;
+    }
+    .faq summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: #8fbfd6;
+      outline: none;
+    }
+    .faq p { margin: 10px 0 0; color: #cfd8dc; }
+    .credibility-bar {
+      background: #0f1114;
+      border: 1px solid #1d2a33;
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      margin: 2rem auto;
+      max-width: 1000px;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+    .credibility-item {
+      flex: 1;
+      min-width: 140px;
+    }
+    .credibility-item strong {
+      display: block;
+      color: #00aaff;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+    .credibility-item span {
+      font-size: 0.85rem;
+      color: #888;
+    }
+    @media (max-width: 600px) {
+      .hero .cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .btn {
+        font-size: 0.95rem;
+        padding: 10px 12px;
+        border-radius: 6px;
+      }
+      #contact { padding: 20px 16px; }
+      #contact h2 { font-size: 1.5rem; margin-bottom: 12px; line-height: 1.2; text-align: center; }
+      #contact iframe { min-height: 520px; width: 100%; border: none; }
+      #contact p { margin-top: 10px; font-size: 0.95rem; text-align: center; }
+      .credibility-bar { flex-direction: column; gap: 1rem; }
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <img src="logo1.png" alt="J-Tech LabWorks Logo"/>
@@ -304,222 +299,207 @@ footer {
     </nav>
   </header>
 
- <section class="hero">
-  <h1 class="hero__title">Electronics Debug & Lab Support When Your Team Is Stuck</h1>
-  <p class="tagline">Verified. Qualified. Simplified.</p>
+  <section class="hero">
+    <h1>The Bench Resource Your Hardware Team Is Missing.</h1>
+    <p class="tagline">PCB Bring-Up. Failure Analysis. Embedded Debug. Nationwide.</p>
+    <p>
+      Your engineers design it. We make sure it works. Hands-on lab support so your team can move forward without adding headcount.
+    </p>
+    <div class="nationwide-badge">Ship-in model &nbsp;|&nbsp; Works nationwide &nbsp;|&nbsp; NDA-friendly</div>
+    <div class="cta" style="margin-top:1.5rem;">
+      <a class="btn btn--ghost" href="#contact">Send a Quick Note</a>
+      <a class="btn btn--ghost"
+         href="/jtech-labworks-capabilities-onepager.pdf?utm_source=website&utm_medium=button&utm_campaign=homepage"
+         target="_blank" rel="noopener">
+        Capabilities (PDF)
+      </a>
+      <a class="btn btn--ghost"
+         href="mailto:janderson@jtechlabworks.com?subject=J-Tech%20LabWorks%20Intro&body=Hi%20Jerry%2C%0A%0AWe%20have%20a%20project%20we%27d%20like%20to%20discuss%3A%20%5Bbrief%20description%5D.%0A%0AThanks%2C%0A%5BName%5D">
+        Email Jerry
+      </a>
+    </div>
+  </section>
 
-  <p>
-  Hands-on support for bring-up, troubleshooting, validation, and rework — 
-  so your team can move forward without adding headcount.
-  </p>
-
-  <div class="cta">
-    <a class="btn btn--ghost" href="#contact">Send a Quick Note</a>
-
-    <a class="btn btn--ghost"
-       href="/jtech-labworks-capabilities-onepager.pdf?utm_source=website&utm_medium=button&utm_campaign=homepage"
-       target="_blank" rel="noopener">
-      Capabilities (PDF)
-    </a>
-
-    <a class="btn btn--ghost"
-       href="mailto:janderson@jtechlabworks.com?subject=J-Tech%20LabWorks%20Intro&body=Hi%20Jerry%2C%0A%0AI%20found%20you%20via%20LinkedIn.%20We%20have%20a%20quick%20question%20about%3A%20%5Bbrief%20problem%5D.%0A%0AProject%20timeline%3A%20%5Bwhen%5D%0ALocation%2Fship-in%3A%20%5Blocal%20or%20ship-in%5D%0A%0AThanks%2C%0A%5BName%5D">
-      Email Jerry
-    </a>
+  <div class="credibility-bar">
+    <div class="credibility-item">
+      <strong>Fortune 500</strong>
+      <span>Consumer electronics experience</span>
+    </div>
+    <div class="credibility-item">
+      <strong>Medical Device</strong>
+      <span>Regulated product background</span>
+    </div>
+    <div class="credibility-item">
+      <strong>R&amp;D Support</strong>
+      <span>Active contract lab work</span>
+    </div>
+    <div class="credibility-item">
+      <strong>Nationwide</strong>
+      <span>Ship-in model, any state</span>
+    </div>
+    <div class="credibility-item">
+      <strong>1&ndash;3 Business Days</strong>
+      <span>Typical turnaround</span>
+    </div>
   </div>
-</section>
 
- <section id="problems">
-  <h2>Common Problems I Help Solve</h2>
-
-  <ul style="list-style:square; padding-left:1.5rem;">
-    <li>Board powers up but won’t boot</li>
-    <li>Random resets or unstable behavior</li>
-    <li>Works on the bench but fails under load</li>
-    <li>Intermittent issues that are hard to reproduce</li>
-    <li>I2C / SPI / UART communication problems</li>
-    <li>New prototypes that need safe bring-up</li>
-    <li>Boards that need repeatable testing across units</li>
-    <li>Noise or interference causing weird behavior</li>
-  </ul>
-</section>
-
-     
+  <section id="problems">
+    <h2>Common Problems I Help Solve</h2>
+    <ul style="list-style:square; padding-left:1.5rem;">
+      <li>Board powers up but won't boot</li>
+      <li>Random resets or unstable behavior</li>
+      <li>Works on the bench but fails under load</li>
+      <li>Intermittent issues that are hard to reproduce</li>
+      <li>I2C / SPI / UART communication problems</li>
+      <li>New prototypes that need safe bring-up</li>
+      <li>Field returns with no obvious failure mode</li>
+      <li>Boards that need repeatable testing across units</li>
+      <li>Noise or interference causing unexpected behavior</li>
+      <li>NPI support when your team is stretched thin</li>
+    </ul>
+  </section>
 
   <section class="services" id="services">
-      
     <h2>Capabilities</h2>
-      <p>
-Practical, hands-on lab support across bring-up, troubleshooting, validation, and rework. 
-Whether you're working through a new prototype, tracking down an issue, or building a repeatable test setup, 
-the focus is always the same — clear answers and a path forward.
-</p> 
+    <p>
+      Practical, hands-on lab support for hardware teams at any stage. The focus is always the same:
+      clear answers, documented results, and a path forward.
+    </p>
     <ul>
-  <li><a href="/pcb-testing-minnesota.html">PCB Testing &amp; Validation</a></li>
-  <li><a href="/pcb-bring-up-testing.html">PCB Bring-Up &amp; Test</a></li>
-  <li><a href="/custom-cable-assembly-minnesota.html">Custom Cable Assemblies</a></li>
-  <li>Soldering &amp; Rework</li>
-  <li>Test Fixture Design &amp; Build</li>
-  <li>Electrical Troubleshooting</li>
-</ul>
+      <li>PCB Bring-Up &amp; Test</li>
+      <li>Failure Analysis &amp; Root Cause Reporting</li>
+      <li>Embedded Debug (J-Link)</li>
+      <li>Signal &amp; Power Integrity</li>
+      <li>Rework &amp; Repair</li>
+      <li>RMA Diagnosis</li>
+      <li>NPI Support</li>
+      <li>EMC Support Testing</li>
+      <li>Soldering &amp; Precision Rework</li>
+    </ul>
+    <p style="margin-top:1.5rem;">
+      <a class="btn btn--ghost"
+         href="/jtech-labworks-capabilities-onepager.pdf?utm_source=website&utm_medium=services&utm_campaign=homepage"
+         target="_blank" rel="noopener">
+        View Full Capabilities (PDF)
+      </a>
+    </p>
+  </section>
 
-</section>
+  <section id="examples">
+    <h2>Signal Capture &amp; System Behavior Analysis</h2>
+    <p>
+      The same approach I use on every project: capture the signals, correlate behavior, and understand
+      what the system is actually doing. No guesswork.
+    </p>
+    <ul>
+      <li>Captured hall sensor trigger and correlated full system response</li>
+      <li>Measured end-to-end response delay (~976 ms) between input and output</li>
+      <li>Identified transient behavior during speaker activation</li>
+      <li>Captured and analyzed SPI communication to TFT display</li>
+      <li>Verified timing and integrity of SCK, MOSI, CS, and DC signals (~400 µs transaction)</li>
+    </ul>
+    <div style="margin-top: 1.5rem;">
+      <img src="switch timing.png" alt="Oscilloscope capture showing hall sensor input and speaker output timing" style="max-width:100%; border-radius:8px;">
+      <p style="opacity:0.7; font-size:0.9rem;">Hall sensor input vs speaker output — measured system response delay ≈ 976 ms</p>
+    </div>
+    <div style="margin-top: 2rem;">
+      <img src="TFT1png.png" alt="SPI communication capture showing SCK, MOSI, CS, and DC signals" style="max-width:100%; border-radius:8px;">
+      <p style="opacity:0.7; font-size:0.9rem;">SPI display communication — SCK, MOSI, CS, and DC signals during display update (~400 µs)</p>
+    </div>
+  </section>
 
-<section id="examples">
-  <h2>Signal Capture &amp; System Behavior Analysis</h2>
+  <section id="how-it-works">
+    <h2>How It Works</h2>
+    <p>No onboarding. No headcount. No one to manage.</p>
+    <p>
+      You ship the hardware and the background info. We do the hands-on work. Results come back
+      with clear documentation and a path forward.
+    </p>
+    <p>Typical turnaround is 1&ndash;3 business days. NDA-friendly by default.</p>
+  </section>
 
-  <p>
-    Simple system, but the same approach I use when troubleshooting real hardware — capture the signals, correlate behavior, and understand what the system is actually doing.
-  </p>
-   <ul>
-<li>Captured hall sensor trigger and correlated full system response</li>
-<li>Measured end-to-end response delay (~976 ms) between input and output</li>
-<li>Identified transient behavior during speaker activation</li>
-<li>Captured and analyzed SPI communication to TFT display</li>
-<li>Verified timing and integrity of SCK, MOSI, CS, and DC signals (~400 µs transaction)</li>
-</ul>
+  <section id="faq" class="faq">
+    <h2>Common Questions</h2>
+    <details>
+      <summary>Do you work with companies outside your area?</summary>
+      <p>Yes. J-Tech LabWorks operates on a ship-in model and works with engineering teams nationwide. You ship boards and documentation, we do the work, and results come back fast.</p>
+    </details>
+    <details>
+      <summary>How does the ship-in model work?</summary>
+      <p>You ship boards along with relevant documentation — schematics, complaint description, or test procedure for validation work. We perform the hands-on work and return results with clear documentation and photos.</p>
+    </details>
+    <details>
+      <summary>Do you take small or rush jobs?</summary>
+      <p>Yes — most small projects are completed in 1&ndash;3 business days. We'll confirm scope and timeline up front.</p>
+    </details>
+    <details>
+      <summary>Will you sign an NDA?</summary>
+      <p>Absolutely. We work NDA-friendly by default and can use your standard NDA or provide ours.</p>
+    </details>
+  </section>
 
-<div style="margin-top: 1.5rem;">
-  <img src="switch timing.png" alt="Oscilloscope capture showing hall sensor input and speaker output timing" style="max-width:100%; border-radius:8px;">
-  <p style="opacity:0.7; font-size:0.9rem;">
-    Hall sensor input vs speaker output — measured system response delay ≈ 976 ms
-  </p>
-</div>
+  <section id="about">
+    <h2>About J-Tech LabWorks</h2>
+    <p>
+      J-Tech LabWorks is a contract electronics lab serving hardware engineering teams nationwide, specializing in PCB bring-up, failure analysis, embedded debug, signal and power integrity, and NPI support.
+    </p>
+    <p>
+      Founded and run by Jerry Anderson, a hands-on electronics professional with experience
+      supporting R&amp;D, product development, validation, and sustaining work at Fortune 500 consumer
+      electronics companies and medical device manufacturers.
+    </p>
+    <p>
+      The lab is equipped for serious bench work: Keysight DSOX1204G oscilloscope, dual logic analyzers,
+      Keysight 34972A data acquisition system, thermal camera, spectrum analyzer with near-field probes,
+      dual bench power supplies, programmable DC load, J-Link debugger, precision soldering and hot air station.
+    </p>
+    <p>
+      The focus is practical, execution-first support with clear communication and fast turnaround.
+      NDA-friendly by default. Ship-in model, works nationwide.
+    </p>
+  </section>
 
-<div style="margin-top: 2rem;">
-  <img src="TFT1png.png" alt="SPI communication capture showing SCK, MOSI, CS, and DC signals" style="max-width:100%; border-radius:8px;">
-  <p style="opacity:0.7; font-size:0.9rem;">
-    SPI display communication — SCK (clock), MOSI (data), CS (chip select), and DC (command/data) during display update (~400 µs)
-  </p>
-</div>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align:center; margin-top:8px;">
+      <a class="btn btn--ghost"
+         href="https://g.page/r/CaniZvCpriv_EBM/review"
+         target="_blank"
+         rel="noopener">
+        Leave a Google Review
+      </a>
+    </p>
+    <iframe
+      id="zoho-contact-form"
+      aria-label="Jtech contact"
+      frameborder="0"
+      style="height:560px;width:100%;border:none;"
+      src="https://forms.zohopublic.com/jandersonjtechl1/form/Jtechcontact/formperma/v1rXdI9M3C0pYvaH3_oLJiUUxwU3YOiJ0aeAENTI2gQ">
+    </iframe>
+    <p style="text-align:center; margin-top:10px; font-size:0.95rem;">
+      Or email us directly:
+      <a href="mailto:janderson@jtechlabworks.com?subject=J-Tech%20Contact%20Request"
+         style="color:#00aaff; text-decoration:underline;">
+        janderson@jtechlabworks.com
+      </a>
+    </p>
+  </section>
 
-<p style="margin-top:1.5rem; font-weight:bold;">
-This is the same approach I use to diagnose real system issues — isolate signals, verify behavior, and remove guesswork.
-</p>
+  <script>
+    window.addEventListener("message", function(event) {
+      if (event.origin.includes("zoho.com") && event.data.height) {
+        document.getElementById("zoho-contact-form").style.height = event.data.height + "px";
+      }
+    });
+  </script>
 
-</section>
-
- <section id="mn-service">
-  <h2>Serving Minnesota</h2>
-  <p>Based in Monticello, we support engineering teams across the Twin Cities and Central Minnesota with fast, NDA-friendly electronics work. Typical turn: <strong>1–3 business days</strong>, with clear pass/fail results and inspection photos.</p>
-  <ul style="list-style:square; padding-left:1.5rem; margin-top:0.75rem;">
-    <li>Ship-in or local drop-off — whichever’s easier</li>
-    <li>PCB testing &amp; validation, precision solder rework, custom cable assemblies, simple test fixtures</li>
-    <li>Common service area: Monticello, Minneapolis–Saint Paul, Maple Grove, Plymouth, St. Cloud, Rogers, Elk River, Buffalo</li>
-  </ul>
-</section>
-
- <section id="mn-faq" class="faq">
-  <h2>Minnesota FAQs</h2>
-
-  <details>
-    <summary>Do you take small or rush jobs?</summary>
-    <p>Yes — most small projects are completed in <strong>1–3 business days</strong>. We’ll confirm scope and timeline up front and include clear pass/fail results with inspection photos.</p>
-  </details>
-
-  <details>
-    <summary>Can we ship parts in, or is this local only?</summary>
-    <p>Either works. We handle <strong>ship-in or local drop-off</strong>. For ship-ins, we’ll share packing guidance and include photos in the final report.</p>
-  </details>
-
-  <details>
-    <summary>Will you sign an NDA?</summary>
-    <p>Absolutely. We work NDA-friendly by default and can use your standard NDA or provide ours.</p>
-  </details>
-</section>
-
-<section id="about">
-  <h2>About J-TECH LABWORKS</h2>
-
-  <p>
-    J-TECH LABWORKS was founded by Jerry Anderson, an <strong>engineering technician</strong> with decades of hands-on
-    electronics lab and manufacturing support experience.
-  </p>
-
-  <p>
-    Prior experience includes supporting product development, validation, and sustaining work
-    inside a <strong>large consumer product manufacturing environment</strong>, working closely with
-    engineering, quality, and operations teams.
-  </p>
-
-  <p>
-    The focus is practical, execution-first support: bring-up troubleshooting, test setup,
-    validation support, precision solder rework, custom cables, and simple fixtures — with
-    clear communication and fast turnaround.
-  </p>
-
-  <p>
-    Based in Monticello, Minnesota. NDA-friendly by default. Ship-in or local drop-off.
-  </p>
-</section>
-
-<section id="contact">
-  <h2>Contact Us</h2>
-<p style="text-align:center; margin-top:8px;">
-  <a class="btn btn--ghost" 
-      href="https://g.page/r/CaniZvCpriv_EBM/review"
-       target="_blank"
-       rel="noopener">
-    Leave a Google Review
-  </a>
-</p>
-
-  <iframe
-    id="zoho-contact-form"
-    aria-label="Jtech contact"
-    frameborder="0"
-    style="height:560px;width:100%;border:none;"
-    src="https://forms.zohopublic.com/jandersonjtechl1/form/Jtechcontact/formperma/v1rXdI9M3C0pYvaH3_oLJiUUxwU3YOiJ0aeAENTI2gQ">
-  </iframe>
-
- 
-  <p style="text-align:center; margin-top:10px; font-size:0.95rem;">
-    Or email us directly:
-    <a href="mailto:janderson@jtechlabworks.com?subject=J-Tech%20Contact%20Request"
-       style="color:#00aaff; text-decoration:underline;">
-      janderson@jtechlabworks.com
-    </a>
-  </p>
-</section>
-
-<script>
-  window.addEventListener("message", function(event) {
-    if (event.origin.includes("zoho.com") && event.data.height) {
-      document.getElementById("zoho-contact-form").style.height = event.data.height + "px";
-    }
-  });
-</script>
-
-<style>
-  /* Responsive adjustments */
-  @media (max-width: 600px) {
-    /* Make the two buttons stack and shrink a touch on phones */
-    .hero .cta{
-      flex-direction:column;
-      align-items:center;
-      gap:10px;
-    }
-    .btn{
-      font-size:0.95rem;
-      padding:10px 12px;
-      border-radius:6px;
-    }
-
-    #contact { padding: 20px 16px; }
-    #contact h2 { font-size: 1.5rem; margin-bottom: 12px; line-height: 1.2; text-align: center; }
-    #contact iframe { min-height: 520px; width: 100%; border: none; }
-    #contact p { margin-top: 10px; font-size: 0.95rem; text-align: center; }
-  }
-</style>
-
-
-<footer>
-  © 2025 J-TECH LABWORKS — All Rights Reserved ·
-  <a href="/jtech-labworks-capabilities-onepager.pdf?utm_source=website&utm_medium=footer&utm_campaign=homepage" target="_blank" rel="noopener" style="color:#00aaff">Capabilities (PDF)</a>
-  · <a href="/pcb-testing-minnesota.html" style="color:#00aaff">MN PCB Testing</a>
-  · <a href="/custom-cable-assembly-minnesota.html" style="color:#00aaff">MN Cable Assembly</a>
-</footer>
-
+  <footer>
+    &copy; 2025 J-TECH LABWORKS — All Rights Reserved &nbsp;&middot;&nbsp;
+    <a href="/jtech-labworks-capabilities-onepager.pdf?utm_source=website&utm_medium=footer&utm_campaign=homepage"
+       target="_blank" rel="noopener" style="color:#00aaff">Capabilities (PDF)</a>
+    &nbsp;&middot;&nbsp;
+    <span style="color:#555;">Monticello, MN &nbsp;|&nbsp; janderson@jtechlabworks.com &nbsp;|&nbsp; 612-227-0195</span>
+  </footer>
 
 </body>
 </html>
