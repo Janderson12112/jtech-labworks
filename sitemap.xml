@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jtechlabworks.com/</loc>
-    <lastmod>2025-08-09</lastmod>
+    <lastmod>2026-05-31</lastmod>
   </url>
-
-  <!-- New MN landing pages -->
+  <url>
+    <loc>https://jtechlabworks.com/pcb-testing-services.html</loc>
+    <lastmod>2026-06-01</lastmod>
+  </url>
+  <url>
+    <loc>https://jtechlabworks.com/pcb-bring-up-testing.html</loc>
+    <lastmod>2026-05-31</lastmod>
+  </url>
   <url>
     <loc>https://jtechlabworks.com/pcb-testing-minnesota.html</loc>
     <lastmod>2025-08-14</lastmod>
@@ -15,16 +21,7 @@
     <lastmod>2025-08-14</lastmod>
   </url>
   <url>
-  <loc>https://jtechlabworks.com/pcb-bring-up-testing.html</loc>
-  <lastmod>2025-08-26</lastmod>
-</url>
-
-
-  <!-- (Optional) Include your PDF so Google can discover it -->
-  <url>
     <loc>https://jtechlabworks.com/jtech-labworks-capabilities-onepager.pdf</loc>
-    <lastmod>2025-08-09</lastmod>
+    <lastmod>2026-05-31</lastmod>
   </url>
 </urlset>
-
-
