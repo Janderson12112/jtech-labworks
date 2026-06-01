@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGLNVHR7ED"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-EGLNVHR7ED', { anonymize_ip: true });
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href="#contact"]').forEach(el => {
+        el.addEventListener('click', () => gtag('event', 'generate_lead', { method: 'cta_scroll' }));
+      });
+      document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
+        el.addEventListener('click', () => gtag('event', 'contact_email_click'));
+      });
+    });
+  </script>
+
+  <link rel="icon" href="/logo1.png">
+  <link rel="apple-touch-icon" href="/logo1.png">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Professional PCB testing services from a contract electronics lab. Bring-up, functional validation, failure analysis, signal integrity, and embedded debug. Ship-in model, nationwide. Fast turnaround.">
+  <meta name="keywords" content="pcb testing services, pcb test service, pcb bring-up testing, pcb functional test, pcb failure analysis, contract electronics lab, pcb validation, pcb testing lab"/>
+  <meta name="author" content="J-TECH LABWORKS"/>
+  <title>PCB Testing Services | J-Tech LabWorks — Contract Electronics Lab</title>
+  <link rel="canonical" href="https://jtechlabworks.com/pcb-testing-services.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PCB Testing Services | J-Tech LabWorks">
+  <meta property="og:description" content="Contract electronics lab offering PCB testing, bring-up, failure analysis, signal integrity, and embedded debug. Ship-in model, nationwide. Fast turnaround.">
+  <meta property="og:url" content="https://jtechlabworks.com/pcb-testing-services.html">
+  <meta property="og:image" content="https://jtechlabworks.com/logo1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PCB Testing Services | J-Tech LabWorks">
+  <meta name="twitter:description" content="Contract electronics lab offering PCB testing, bring-up, failure analysis, and embedded debug. Ship-in, nationwide.">
+  <meta name="twitter:image" content="https://jtechlabworks.com/logo1.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "PCB Testing Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "J-Tech LabWorks",
+      "url": "https://jtechlabworks.com",
+      "telephone": "+1-612-227-0195",
+      "email": "janderson@jtechlabworks.com"
+    },
+    "description": "Contract electronics lab offering PCB testing, bring-up, failure analysis, signal integrity, and embedded debug. Ship-in model, nationwide.",
+    "areaServed": "US",
+    "url": "https://jtechlabworks.com/pcb-testing-services.html"
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --blue: #00aaff;
+      --blue-dim: rgba(0,170,255,0.15);
+      --blue-faint: rgba(0,170,255,0.05);
+      --bg: #080a0d;
+      --bg2: #0d1117;
+      --bg3: #0f1318;
+      --border: rgba(0,170,255,0.12);
+      --text: #c9d1d9;
+      --text-dim: #6e7681;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.03) 2px,
+        rgba(0,0,0,0.03) 4px
+      );
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .circuit-bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image:
+        linear-gradient(var(--blue) 1px, transparent 1px),
+        linear-gradient(90deg, var(--blue) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    header {
+      background: rgba(8,10,13,0.95);
+      backdrop-filter: blur(10px);
+      padding: 1.25rem 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+    header img { height: 70px; image-rendering: crisp-edges; }
+    nav { margin-top: 0.75rem; }
+    nav a {
+      margin: 0 1.25rem;
+      color: var(--blue);
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s, text-shadow 0.2s;
+    }
+    nav a:hover { color: #fff; text-shadow: 0 0 12px var(--blue); }
+
+    .hero {
+      position: relative;
+      padding: 6rem 2rem 5rem;
+      text-align: center;
+      background: var(--bg2);
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+    }
+    .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+      line-height: 1.15;
+      text-shadow: 0 0 40px rgba(0,170,255,0.3);
+      animation: fadeUp 0.8s ease both;
+    }
+    .hero h1 span { color: var(--blue); }
+    .hero .tagline {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      color: var(--blue);
+      margin-top: 1rem;
+      text-transform: uppercase;
+      animation: fadeUp 0.8s 0.1s ease both;
+    }
+    .hero p.sub {
+      font-size: 1rem;
+      color: var(--text-dim);
+      max-width: 700px;
+      margin: 1.25rem auto 0;
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+    .nationwide-badge {
+      display: inline-block;
+      background: var(--blue-dim);
+      border: 1px solid rgba(0,170,255,0.3);
+      color: var(--blue);
+      font-size: 0.78rem;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-top: 1.25rem;
+      letter-spacing: 0.08em;
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+    .cta {
+      margin-top: 2rem;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 0.8s 0.4s ease both;
+    }
+
+    .btn {
+      display: inline-block;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 12px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn--solid { background: var(--blue); color: #000; }
+    .btn--solid:hover { background: #33bbff; box-shadow: 0 0 20px rgba(0,170,255,0.5); }
+    .btn--ghost { background: transparent; color: var(--blue); border: 1px solid var(--blue); }
+    .btn--ghost:hover { background: var(--blue-dim); box-shadow: 0 0 15px rgba(0,170,255,0.2); }
+
+    .cred-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg3);
+    }
+    .cred-item {
+      padding: 1.5rem 1rem;
+      text-align: center;
+      border-right: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+    .cred-item:last-child { border-right: none; }
+    .cred-item:hover { background: var(--blue-faint); }
+    .cred-item strong {
+      display: block;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      color: var(--blue);
+      margin-bottom: 0.3rem;
+    }
+    .cred-item span { font-size: 0.75rem; color: var(--text-dim); }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 1em;
+      background: var(--blue);
+      box-shadow: 0 0 8px var(--blue);
+    }
+    h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border), transparent);
+    }
+
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .problem-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--blue);
+      border-radius: 4px;
+      padding: 12px 16px;
+      font-size: 0.9rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .problem-item:hover { background: var(--blue-faint); border-left-color: #33bbff; }
+    .problem-item::before { content: '> '; color: var(--blue); font-weight: bold; }
+
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .cap-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px;
+      transition: all 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .cap-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, var(--blue), transparent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .cap-item:hover::before { transform: scaleX(1); }
+    .cap-item:hover { background: var(--blue-faint); border-color: rgba(0,170,255,0.3); }
+    .cap-label {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .cap-name { font-size: 0.95rem; color: #fff; }
+    .cap-desc { font-size: 0.82rem; color: var(--text-dim); margin-top: 0.5rem; line-height: 1.5; }
+
+    .equip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 10px;
+    }
+    .equip-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.2s;
+    }
+    .equip-item:hover { background: var(--blue-faint); }
+    .equip-dot {
+      width: 6px; height: 6px;
+      background: var(--blue);
+      border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: 0 0 6px var(--blue);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .step {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+    .step-num {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--blue);
+      opacity: 0.25;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .step h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.8rem;
+      color: #fff;
+      margin: 0 0 0.5rem;
+      letter-spacing: 0.05em;
+    }
+    .step p { font-size: 0.85rem; color: var(--text-dim); margin: 0; }
+
+    .pricing-table {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      max-width: 640px;
+    }
+    .pricing-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+    }
+    .pricing-row:last-child { border-bottom: none; }
+    .pricing-row:nth-child(even) { background: rgba(0,170,255,0.03); }
+    .pricing-row .label { color: var(--text); }
+    .pricing-row .amount { color: var(--blue); font-family: 'Orbitron', sans-serif; font-size: 0.82rem; font-weight: 700; }
+    .pricing-note { font-size: 0.82rem; color: var(--text-dim); margin-top: 0.75rem; }
+
+    details {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 14px 16px;
+      margin: 8px 0;
+      transition: background 0.2s;
+    }
+    details:hover { background: var(--blue-faint); }
+    details[open] { border-color: rgba(0,170,255,0.3); }
+    summary {
+      cursor: pointer;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: 0.05em;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    summary::before { content: '[+]'; color: var(--blue); font-family: 'Share Tech Mono', monospace; }
+    details[open] summary::before { content: '[-]'; }
+    details p { margin: 12px 0 0; font-size: 0.9rem; color: var(--text-dim); }
+
+    .about-inner {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      font-size: 0.95rem;
+    }
+    .about-inner p { margin: 0 0 1rem; color: var(--text-dim); }
+    .about-inner p:last-child { margin: 0; }
+    .about-inner strong { color: #fff; }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 0;
+    }
+
+    .pulse {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: #00ff88;
+      border-radius: 50%;
+      margin-right: 6px;
+      animation: pulse 2s infinite;
+      box-shadow: 0 0 6px #00ff88;
+    }
+
+    footer {
+      background: var(--bg2);
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--blue); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 4rem 1.25rem 3rem; }
+      .cta { flex-direction: column; align-items: center; }
+      .cred-bar { grid-template-columns: repeat(2, 1fr); }
+      .cred-item { border-bottom: 1px solid var(--border); }
+      section { padding: 3rem 1.25rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="https://jtechlabworks.com">
+      <img src="https://www.jtechlabworks.com/logo1.png" alt="J-Tech LabWorks Logo"/>
+    </a>
+    <nav>
+      <a href="https://jtechlabworks.com/#services">Services</a>
+      <a href="https://jtechlabworks.com/#equipment">Lab</a>
+      <a href="https://jtechlabworks.com/#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="circuit-bg"></div>
+    <h1>PCB Testing Services<br><span>That Get You Answers Fast</span></h1>
+    <p class="tagline">Bring-Up &nbsp;·&nbsp; Functional Validation &nbsp;·&nbsp; Failure Analysis &nbsp;·&nbsp; Embedded Debug</p>
+    <p class="sub">Ship your boards. We do the hands-on bench work. Results and documentation come back fast. No headcount, no contracts, no queue.</p>
+    <div class="nationwide-badge">
+      <span class="pulse"></span>Ship-in model &nbsp;|&nbsp; Works nationwide &nbsp;|&nbsp; NDA-friendly
+    </div>
+    <div class="cta">
+      <a class="btn btn--solid" href="#contact">Request a Quote</a>
+      <a class="btn btn--ghost" href="mailto:janderson@jtechlabworks.com">Email Jerry</a>
+      <a class="btn btn--ghost" href="https://jtechlabworks.com" >Back to Main Site</a>
+    </div>
+  </section>
+
+  <div class="cred-bar">
+    <div class="cred-item"><strong>Fortune 500</strong><span>Consumer electronics experience</span></div>
+    <div class="cred-item"><strong>Medical Device</strong><span>Regulated product background</span></div>
+    <div class="cred-item"><strong>Active R&amp;D</strong><span>Current contract lab work</span></div>
+    <div class="cred-item"><strong>Nationwide</strong><span>Ship-in, any state</span></div>
+    <div class="cred-item"><strong>1&ndash;3 Days</strong><span>Typical turnaround</span></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>When Teams Need PCB Testing Services</h2>
+    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:1.5rem;">
+      Most PCB testing services are tied to large contract manufacturers with minimum volumes and long lead times. J-Tech LabWorks is built specifically for hardware teams that need fast, accurate results on prototypes, small batches, and field returns.
+    </p>
+    <div class="problems-grid">
+      <div class="problem-item">Board powers up but won't initialize</div>
+      <div class="problem-item">Field returns with no obvious failure mode</div>
+      <div class="problem-item">Works on the bench but fails under load</div>
+      <div class="problem-item">Intermittent issues that are hard to reproduce</div>
+      <div class="problem-item">I2C / SPI / UART communication problems</div>
+      <div class="problem-item">New prototype that needs safe first power-on</div>
+      <div class="problem-item">Noise or interference causing unexpected behavior</div>
+      <div class="problem-item">Boards that need repeatable validation across units</div>
+      <div class="problem-item">RMA pile with no time to investigate</div>
+      <div class="problem-item">NPI support when your team is stretched thin</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>PCB Testing Capabilities</h2>
+    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:1.5rem;">
+      Hands-on bench work across the full range of board-level testing and validation. Clear answers, documented results, and a path forward.
+    </p>
+    <div class="cap-grid">
+      <div class="cap-item">
+        <div class="cap-label">Bring-Up</div>
+        <div class="cap-name">PCB Bring-Up &amp; Functional Validation</div>
+        <div class="cap-desc">First power-on testing. Rail validation, current draw, peripheral init, reset sequencing, bus verification.</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-label">Investigation</div>
+        <div class="cap-name">Failure Analysis &amp; Root Cause Reporting</div>
+        <div class="cap-desc">Structured diagnostic process. Visual inspection, power-up characterization, signal capture, thermal imaging.</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-label">Instrumentation</div>
+        <div class="cap-name">Signal Integrity Testing</div>
+        <div class="cap-desc">Oscilloscope capture, rise/fall time, overshoot, crosstalk. Clock signals, data lines, power rails.</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-label">Instrumentation</div>
+        <div class="cap-name">Power Integrity Testing</div>
+        <div class="cap-desc">Rail noise, load transient response, sequencing verification. Thermal imaging for hot spots and current crowding.</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-label">Debug</div>
+        <div class="cap-name">Embedded Debug</div>
+        <div class="cap-desc">J-Link debugger for SWD and JTAG targets. Step-through debug, register inspection, firmware validation.</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-label">Diagnosis</div>
+        <div class="cap-name">RMA Diagnosis</div>
+        <div class="cap-desc">Field returns worked through structured diagnostics. Root cause documented with photos and recommended next steps.</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-label">Validation</div>
+        <div class="cap-name">Continuity &amp; Shorts Testing</div>
+        <div class="cap-desc">Board-level continuity, short circuit identification, net resistance measurement. Bare board and post-rework validation.</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-label">Rework</div>
+        <div class="cap-name">Post-Rework Validation</div>
+        <div class="cap-desc">Boards validated after rework before returning to service. Confirms rework is correct and board passes functional test.</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-label">Support</div>
+        <div class="cap-name">NPI Support</div>
+        <div class="cap-desc">Prototype bring-up through early production validation. Hands-on support when boards are newest and most likely to surprise.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>Lab Instrumentation</h2>
+    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:1.5rem;">
+      A fully equipped investigation and validation lab. Not a soldering table.
+    </p>
+    <div class="equip-grid">
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">Scope:</strong> Keysight DSOX1204G, 4-channel, 200MHz</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">Logic:</strong> Dual logic analyzers for parallel bus capture</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">DMM:</strong> Fluke 289 true RMS digital multimeter</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">Thermal:</strong> Thermal imaging camera</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">RF:</strong> Spectrum analyzer with near-field probes</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">DAQ:</strong> Keysight 34972A data acquisition unit</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">Power:</strong> Dual bench power supplies</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">Load:</strong> Programmable DC load</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">Debug:</strong> Segger J-Link debugger</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">Rework:</strong> Precision soldering station and hot air rework</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>What You Get Back</h2>
+    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:1.5rem;">
+      Every PCB testing engagement includes documentation. Not just a pass or fail.
+    </p>
+    <div class="problems-grid">
+      <div class="problem-item">Written summary of findings in plain language</div>
+      <div class="problem-item">Photos of test setup and any anomalies found</div>
+      <div class="problem-item">Scope captures and measurement data</div>
+      <div class="problem-item">Root cause assessment with confidence level noted</div>
+      <div class="problem-item">Specific recommended next steps</div>
+      <div class="problem-item">Return of hardware and remaining materials</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Scope</h3>
+        <p>Send a brief description of the board, the issue or test requirement, and any available drawings or schematics.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Quote</h3>
+        <p>We confirm the details and provide a clear quote and ETA before any work begins. No surprises on the invoice.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Ship</h3>
+        <p>Send the boards to J-Tech LabWorks. Ship-in model, works nationwide. Return shipping at your cost unless arranged.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Results</h3>
+        <p>Test report, photos, and findings delivered. Small jobs often completed in 1 to 3 business days from receipt.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>Pricing</h2>
+    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:1.5rem;">
+      A quote is provided before work begins on any engagement.
+    </p>
+    <div class="pricing-table">
+      <div class="pricing-row"><span class="label">Bench and lab work</span><span class="amount">$120/hr</span></div>
+      <div class="pricing-row"><span class="label">Advanced troubleshooting and failure analysis</span><span class="amount">$160/hr</span></div>
+      <div class="pricing-row"><span class="label">Minimum engagement</span><span class="amount">$500</span></div>
+      <div class="pricing-row"><span class="label">Rush service — next business day</span><span class="amount">+40%</span></div>
+      <div class="pricing-row"><span class="label">Rush service — same day</span><span class="amount">+75%</span></div>
+      <div class="pricing-row"><span class="label">Materials</span><span class="amount">Cost + 10%</span></div>
+    </div>
+    <p class="pricing-note">1-hour minimum, 0.5-hour increments. 50% deposit required for first-time customers or quotes over $1,000.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>Common Questions</h2>
+    <details>
+      <summary>Do you work with companies outside your area?</summary>
+      <p>Yes. J-Tech LabWorks operates on a ship-in model and works with engineering teams nationwide. You ship hardware and documentation, we do the work, and results come back fast.</p>
+    </details>
+    <details>
+      <summary>How does the ship-in model work?</summary>
+      <p>You ship the hardware along with relevant documentation — schematics, complaint description, or test procedure for validation work. We perform the hands-on work and return results with clear documentation and photos.</p>
+    </details>
+    <details>
+      <summary>Do you take small or rush jobs?</summary>
+      <p>Yes — most small projects are completed in 1–3 business days. We'll confirm scope and timeline up front.</p>
+    </details>
+    <details>
+      <summary>Will you sign an NDA?</summary>
+      <p>Absolutely. We work NDA-friendly by default and can use your standard NDA or provide ours.</p>
+    </details>
+    <details>
+      <summary>What information do you need to provide a quote?</summary>
+      <p>A brief description of the board, the issue or test requirement, and any available schematics or drawings. The more context the better, but a quick description is enough to get started.</p>
+    </details>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>What Engineers Say</h2>
+    <div style="background:var(--bg3); border:1px solid var(--border); border-left: 3px solid var(--blue); border-radius:8px; padding:2rem; position:relative;">
+      <div style="font-size:3rem; color:var(--blue); opacity:0.2; position:absolute; top:1rem; left:1.5rem; font-family:Georgia,serif; line-height:1;">&ldquo;</div>
+      <p style="font-size:1rem; color:var(--text); line-height:1.8; margin:0 0 1.5rem; padding-left:1rem;">
+        Jerry was a critical contributor during my time at Sleep Number, working in the R&amp;D department. His attention to detail with test fixtures, ability to quickly assemble and bring up PCBAs, and troubleshoot PCBs in the prototype phase through to production was essential for the launch of the Climate 360 platform. His impact on the team and the pipeline project was a significant factor toward meeting the expected launch date and ensuring a smooth production run.
+      </p>
+      <div style="padding-left:1rem;">
+        <div style="font-family:'Orbitron',sans-serif; font-size:0.8rem; color:#fff; font-weight:600;">Jacob W.</div>
+        <div style="font-size:0.78rem; color:var(--text-dim);">Electrical Engineer</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>About J-Tech LabWorks</h2>
+    <div class="about-inner">
+      <p>J-Tech LabWorks is a <strong>contract electronics lab</strong> serving hardware engineering teams nationwide, specializing in PCB testing, bring-up, failure analysis, embedded debug, signal and power integrity, and NPI support.</p>
+      <p>Founded and run by Jerry Anderson, a hands-on electronics professional with 22 years of experience supporting R&amp;D, product development, validation, and sustaining work at <strong>Fortune 500 consumer electronics companies</strong> and <strong>medical device manufacturers</strong> including Starkey Hearing Technologies and Intricon. Current contract work includes R&amp;D support for Sleep Number.</p>
+      <p>The focus is practical, execution-first support with clear communication and fast turnaround. NDA-friendly by default. Ship-in model, works nationwide.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="contact" style="text-align:center;">
+    <h2 style="justify-content:center;">Get a Quote</h2>
+    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:1.5rem;">
+      Send a brief scope and we will confirm details, provide a quote, and get to work. No commitment required.
+    </p>
+    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
+      <a class="btn btn--solid" href="mailto:janderson@jtechlabworks.com?subject=PCB%20Testing%20Quote%20Request">Email Jerry</a>
+      <a class="btn btn--ghost" href="https://jtechlabworks.com/#contact">Contact Form</a>
+    </div>
+    <p style="font-size:0.85rem; color:var(--text-dim);">612-227-0195 &nbsp;&nbsp; janderson@jtechlabworks.com &nbsp;&nbsp; jtechlabworks.com</p>
+  </section>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.cap-item, .problem-item, .equip-item, .step').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(16px)';
+      el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+      observer.observe(el);
+    });
+  </script>
+
+  <footer>
+    &copy; 2026 J-TECH LABWORKS — All Rights Reserved &nbsp;&middot;&nbsp;
+    <a href="https://jtechlabworks.com">jtechlabworks.com</a>
+    &nbsp;&middot;&nbsp;
+    <a href="mailto:janderson@jtechlabworks.com">janderson@jtechlabworks.com</a>
+    &nbsp;&middot;&nbsp;
+    612-227-0195
+  </footer>
+
+</body>
+</html>
