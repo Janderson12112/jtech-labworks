@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    if (location.hostname.includes('github.io')) {
+      location.replace('https://jtechlabworks.com' + location.pathname + location.search + location.hash);
+    }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGLNVHR7ED"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-EGLNVHR7ED', { anonymize_ip: true });
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href="#contact"]').forEach(el => {
+        el.addEventListener('click', () => gtag('event', 'generate_lead', { method: 'cta_scroll' }));
+      });
+      document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
+        el.addEventListener('click', () => gtag('event', 'contact_email_click'));
+      });
+    });
+  </script>
+
+  <link rel="icon" href="/logo1.png">
+  <link rel="apple-touch-icon" href="/logo1.png">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="PCB failure analysis services from a contract electronics lab. Board-level fault isolation, root cause reporting, thermal imaging, and RMA diagnosis. Ship-in model, nationwide. Fast turnaround.">
+  <meta name="keywords" content="failure analysis services, pcb failure analysis, root cause analysis electronics, board level failure analysis, rma diagnosis, electronics failure analysis lab, pcb fault isolation"/>
+  <meta name="author" content="J-TECH LABWORKS"/>
+  <title>Failure Analysis Services | J-Tech LabWorks — Contract Electronics Lab</title>
+  <link rel="canonical" href="https://jtechlabworks.com/failure-analysis-services.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Failure Analysis Services | J-Tech LabWorks">
+  <meta property="og:description" content="PCB failure analysis and root cause reporting from a contract electronics lab. Ship-in model, nationwide. Fast turnaround.">
+  <meta property="og:url" content="https://jtechlabworks.com/failure-analysis-services.html">
+  <meta property="og:image" content="https://jtechlabworks.com/logo1.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Failure Analysis Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "J-Tech LabWorks",
+      "url": "https://jtechlabworks.com",
+      "telephone": "+1-612-227-0195",
+      "email": "janderson@jtechlabworks.com"
+    },
+    "description": "PCB failure analysis and root cause reporting. Board-level fault isolation, thermal imaging, RMA diagnosis. Ship-in model, nationwide.",
+    "areaServed": "US",
+    "url": "https://jtechlabworks.com/failure-analysis-services.html"
+  }
+  </script>
+
+  <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+o.onload=function(){window.trackingFunctions.onLoad({appId:"6a072cd78340eb0011a45b76"})},
+document.head.appendChild(o)}initApollo();</script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --blue: #00aaff;
+      --blue-dim: rgba(0,170,255,0.15);
+      --blue-faint: rgba(0,170,255,0.05);
+      --bg: #080a0d;
+      --bg2: #0d1117;
+      --bg3: #0f1318;
+      --border: rgba(0,170,255,0.12);
+      --text: #c9d1d9;
+      --text-dim: #6e7681;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(
+        0deg, transparent, transparent 2px,
+        rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px
+      );
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .circuit-bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image:
+        linear-gradient(var(--blue) 1px, transparent 1px),
+        linear-gradient(90deg, var(--blue) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    header {
+      background: rgba(8,10,13,0.95);
+      backdrop-filter: blur(10px);
+      padding: 1.25rem 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+    header img { height: 70px; image-rendering: crisp-edges; }
+    nav { margin-top: 0.75rem; }
+    nav a {
+      margin: 0 1.25rem;
+      color: var(--blue);
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s, text-shadow 0.2s;
+    }
+    nav a:hover { color: #fff; text-shadow: 0 0 12px var(--blue); }
+
+    .hero {
+      position: relative;
+      padding: 6rem 2rem 5rem;
+      text-align: center;
+      background: var(--bg2);
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+    }
+    .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+      line-height: 1.15;
+      text-shadow: 0 0 40px rgba(0,170,255,0.3);
+      animation: fadeUp 0.8s ease both;
+    }
+    .hero h1 span { color: var(--blue); }
+    .hero .tagline {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      color: var(--blue);
+      margin-top: 1rem;
+      text-transform: uppercase;
+      animation: fadeUp 0.8s 0.1s ease both;
+    }
+    .hero p.sub {
+      font-size: 1rem;
+      color: var(--text-dim);
+      max-width: 700px;
+      margin: 1.25rem auto 0;
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+    .nationwide-badge {
+      display: inline-block;
+      background: var(--blue-dim);
+      border: 1px solid rgba(0,170,255,0.3);
+      color: var(--blue);
+      font-size: 0.78rem;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-top: 1.25rem;
+      letter-spacing: 0.08em;
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+    .cta {
+      margin-top: 2rem;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 0.8s 0.4s ease both;
+    }
+
+    .btn {
+      display: inline-block;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 12px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn--solid { background: var(--blue); color: #000; }
+    .btn--solid:hover { background: #33bbff; box-shadow: 0 0 20px rgba(0,170,255,0.5); }
+    .btn--ghost { background: transparent; color: var(--blue); border: 1px solid var(--blue); }
+    .btn--ghost:hover { background: var(--blue-dim); box-shadow: 0 0 15px rgba(0,170,255,0.2); }
+
+    .cred-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg3);
+    }
+    .cred-item {
+      padding: 1.5rem 1rem;
+      text-align: center;
+      border-right: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+    .cred-item:last-child { border-right: none; }
+    .cred-item:hover { background: var(--blue-faint); }
+    .cred-item strong {
+      display: block;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      color: var(--blue);
+      margin-bottom: 0.3rem;
+    }
+    .cred-item span { font-size: 0.75rem; color: var(--text-dim); }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 1em;
+      background: var(--blue);
+      box-shadow: 0 0 8px var(--blue);
+    }
+    h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border), transparent);
+    }
+
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .problem-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--blue);
+      border-radius: 4px;
+      padding: 12px 16px;
+      font-size: 0.9rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .problem-item:hover { background: var(--blue-faint); border-left-color: #33bbff; }
+    .problem-item::before { content: '> '; color: var(--blue); font-weight: bold; }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .process-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px;
+      transition: all 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .process-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, var(--blue), transparent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .process-item:hover::before { transform: scaleX(1); }
+    .process-item:hover { background: var(--blue-faint); border-color: rgba(0,170,255,0.3); }
+    .process-label {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .process-name { font-size: 0.95rem; color: #fff; margin-bottom: 0.4rem; }
+    .process-desc { font-size: 0.82rem; color: var(--text-dim); line-height: 1.5; }
+
+    .equip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 10px;
+    }
+    .equip-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.2s;
+    }
+    .equip-item:hover { background: var(--blue-faint); }
+    .equip-dot {
+      width: 6px; height: 6px;
+      background: var(--blue);
+      border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: 0 0 6px var(--blue);
+    }
+
+    .scope-wrap {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .scope-wrap img { width: 100%; max-height: 500px; object-fit: cover; object-position: center; display: block; }
+    .scope-caption {
+      padding: 10px 14px;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      border-top: 1px solid var(--border);
+    }
+    .scope-caption::before { content: '// '; color: var(--blue); }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .step {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+    .step-num {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--blue);
+      opacity: 0.25;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .step h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.8rem;
+      color: #fff;
+      margin: 0 0 0.5rem;
+      letter-spacing: 0.05em;
+    }
+    .step p { font-size: 0.85rem; color: var(--text-dim); margin: 0; }
+
+    .pricing-table {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      max-width: 640px;
+    }
+    .pricing-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+    }
+    .pricing-row:last-child { border-bottom: none; }
+    .pricing-row:nth-child(even) { background: rgba(0,170,255,0.03); }
+    .pricing-row .label { color: var(--text); }
+    .pricing-row .amount { color: var(--blue); font-family: 'Orbitron', sans-serif; font-size: 0.82rem; font-weight: 700; }
+    .pricing-note { font-size: 0.82rem; color: var(--text-dim); margin-top: 0.75rem; }
+
+    details {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 14px 16px;
+      margin: 8px 0;
+      transition: background 0.2s;
+    }
+    details:hover { background: var(--blue-faint); }
+    details[open] { border-color: rgba(0,170,255,0.3); }
+    summary {
+      cursor: pointer;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: 0.05em;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    summary::before { content: '[+]'; color: var(--blue); font-family: 'Share Tech Mono', monospace; }
+    details[open] summary::before { content: '[-]'; }
+    details p { margin: 12px 0 0; font-size: 0.9rem; color: var(--text-dim); }
+
+    .about-inner {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      font-size: 0.95rem;
+    }
+    .about-inner p { margin: 0 0 1rem; color: var(--text-dim); }
+    .about-inner p:last-child { margin: 0; }
+    .about-inner strong { color: #fff; }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 0;
+    }
+
+    .pulse {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: #00ff88;
+      border-radius: 50%;
+      margin-right: 6px;
+      animation: pulse 2s infinite;
+      box-shadow: 0 0 6px #00ff88;
+    }
+
+    footer {
+      background: var(--bg2);
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--blue); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 4rem 1.25rem 3rem; }
+      .cta { flex-direction: column; align-items: center; }
+      .cred-bar { grid-template-columns: repeat(2, 1fr); }
+      .cred-item { border-bottom: 1px solid var(--border); }
+      section { padding: 3rem 1.25rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="https://jtechlabworks.com">
+      <img src="https://www.jtechlabworks.com/logo1.png" alt="J-Tech LabWorks Logo"/>
+    </a>
+    <nav>
+      <a href="https://jtechlabworks.com/#services">Services</a>
+      <a href="https://jtechlabworks.com/#equipment">Lab</a>
+      <a href="https://jtechlabworks.com/#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="circuit-bg"></div>
+    <h1>Failure Analysis Services<br><span>That Find the Real Answer</span></h1>
+    <p class="tagline">Root Cause Reporting &nbsp;·&nbsp; Thermal Imaging &nbsp;·&nbsp; RMA Diagnosis &nbsp;·&nbsp; Nationwide</p>
+    <p class="sub">Board came back from the field and no one knows why it failed. Ship it in. We dig in, find the cause, and send back a clear written report with photos and recommended next steps.</p>
+    <div class="nationwide-badge">
+      <span class="pulse"></span>Ship-in model &nbsp;|&nbsp; Works nationwide &nbsp;|&nbsp; NDA-friendly
+    </div>
+    <div class="cta">
+      <a class="btn btn--solid" href="#contact">Request a Quote</a>
+      <a class="btn btn--ghost" href="mailto:janderson@jtechlabworks.com">Email Jerry</a>
+      <a class="btn btn--ghost" href="https://jtechlabworks.com">Back to Main Site</a>
+    </div>
+  </section>
+
+  <div class="cred-bar">
+    <div class="cred-item"><strong>Fortune 500</strong><span>Consumer electronics experience</span></div>
+    <div class="cred-item"><strong>Medical Device</strong><span>Regulated product background</span></div>
+    <div class="cred-item"><strong>Active R&amp;D</strong><span>Current contract lab work</span></div>
+    <div class="cred-item"><strong>Nationwide</strong><span>Ship-in, any state</span></div>
+    <div class="cred-item"><strong>1&ndash;3 Days</strong><span>Typical turnaround</span></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>When Teams Need Failure Analysis</h2>
+    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:1.5rem;">
+      Field returns pile up. Engineers are heads down on the next design. Nobody has bench cycles to dig into boards that came back from the field with no obvious damage and no clear failure mode. That's exactly what J-Tech LabWorks is built for.
+    </p>
+    <div class="problems-grid">
+      <div class="problem-item">Board came back from the field with no obvious damage</div>
+      <div class="problem-item">Failure can't be reproduced on the bench</div>
+      <div class="problem-item">No visible burned components or physical damage</div>
+      <div class="problem-item">Customer says it stopped working, no other info</div>
+      <div class="problem-item">Multiple units failing the same way in the field</div>
+      <div class="problem-item">Need documented root cause before a design revision</div>
+      <div class="problem-item">RMA pile growing with no time to investigate</div>
+      <div class="problem-item">Warranty claim requires a written failure report</div>
+      <div class="problem-item">Intermittent failure that only shows up under load</div>
+      <div class="problem-item">Need an independent second opinion on a failure</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>The Failure Analysis Process</h2>
+    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:1.5rem;">
+      Every failure analysis engagement follows a structured process. Observation first, interpretation second. No conclusions before the evidence.
+    </p>
+    <div class="process-grid">
+      <div class="process-item">
+        <div class="process-label">Step 1</div>
+        <div class="process-name">Visual Inspection</div>
+        <div class="process-desc">Full visual examination of the board under magnification. Component condition, solder joints, PCB surface, connectors, and any physical anomalies documented with photos.</div>
+      </div>
+      <div class="process-item">
+        <div class="process-label">Step 2</div>
+        <div class="process-name">Thermal Imaging</div>
+        <div class="process-desc">Thermal camera scan during power-up. Hot spots, marginal connections, and current crowding that don't show up on a scope identified and documented.</div>
+      </div>
+      <div class="process-item">
+        <div class="process-label">Step 3</div>
+        <div class="process-name">Power-Up Characterization</div>
+        <div class="process-desc">Controlled power-up with current limiting. Rail voltages, current draw, and sequencing measured and compared against expected values.</div>
+      </div>
+      <div class="process-item">
+        <div class="process-label">Step 4</div>
+        <div class="process-name">Signal Capture</div>
+        <div class="process-desc">Oscilloscope and logic analyzer used to capture relevant signals. Communication buses, clock signals, reset behavior, and any anomalies recorded.</div>
+      </div>
+      <div class="process-item">
+        <div class="process-label">Step 5</div>
+        <div class="process-name">Fault Isolation</div>
+        <div class="process-desc">Systematic narrowing of the failure to a specific component, net, or design condition. Controlled variables, one change at a time.</div>
+      </div>
+      <div class="process-item">
+        <div class="process-label">Step 6</div>
+        <div class="process-name">Root Cause Report</div>
+        <div class="process-desc">Written findings with photos, scope captures, and measurement data. Root cause stated clearly with confidence level noted. Recommended next steps included.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>Signal Capture Examples</h2>
+    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:1.5rem;">
+      Real work from the bench. The same methodology on every failure analysis engagement.
+    </p>
+    <div class="scope-wrap">
+      <img src="https://www.jtechlabworks.com/thermal1.jpg" alt="Thermal camera image showing hot spot on PCB during failure analysis">
+      <div class="scope-caption">Thermal scan identifying a 152.8°C hot spot on a board with no visible failure — component identified, root cause confirmed</div>
+    </div>
+    <div class="scope-wrap">
+      <img src="https://www.jtechlabworks.com/burnt-component.jpg" alt="Close-up of burnt component identified during visual inspection">
+      <div class="scope-caption">Burnt component identified during visual inspection — part of a multi-step failure analysis including thermal imaging and signal capture</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>Lab Instrumentation</h2>
+    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:1.5rem;">
+      A fully equipped investigation lab. Every tool needed to find what actually failed and why.
+    </p>
+    <div class="equip-grid">
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">Thermal:</strong> Thermal imaging camera for hot spot identification</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">Scope:</strong> Keysight DSOX1204G, 4-channel, 200MHz</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">Logic:</strong> Dual logic analyzers for bus capture</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">DMM:</strong> Fluke 289 true RMS digital multimeter</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">RF:</strong> Spectrum analyzer with near-field probes</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">Power:</strong> Dual bench power supplies with current limiting</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">Load:</strong> Programmable DC load for load transient testing</div>
+      <div class="equip-item"><div class="equip-dot"></div><strong style="color:#fff; margin-right:6px;">DAQ:</strong> Keysight 34972A data acquisition unit</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>What You Get Back</h2>
+    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:1.5rem;">
+      Every failure analysis engagement includes a written report. Not just a pass or fail.
+    </p>
+    <div class="problems-grid">
+      <div class="problem-item">Written summary of findings in plain language</div>
+      <div class="problem-item">Photos of inspection, test setup, and anomalies</div>
+      <div class="problem-item">Scope captures and thermal images</div>
+      <div class="problem-item">Root cause stated with confidence level</div>
+      <div class="problem-item">Specific recommended next steps</div>
+      <div class="problem-item">Return of hardware and remaining materials</div>
+    </div>
+    <p style="color:var(--text-dim); font-size:0.85rem; margin-top:1.25rem;">
+      If the root cause is inconclusive, that is stated clearly with an explanation of what additional testing would resolve it. You never get a confident answer on an uncertain result.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Scope</h3>
+        <p>Send a brief description of the failure, any known symptoms, and what the board is supposed to do. Schematics and photos helpful but not required to get started.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Quote</h3>
+        <p>We confirm the details and provide a clear quote and ETA before any work begins. No surprises on the invoice.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Ship</h3>
+        <p>Send the boards to J-Tech LabWorks. Ship-in model, works nationwide. Return shipping at your cost unless arranged otherwise.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Report</h3>
+        <p>Written findings, photos, and recommended next steps delivered. Most failure analysis engagements completed in 1 to 3 business days from receipt.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>Pricing</h2>
+    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:1.5rem;">
+      A quote is provided before work begins on any engagement.
+    </p>
+    <div class="pricing-table">
+      <div class="pricing-row"><span class="label">Failure analysis and root cause reporting</span><span class="amount">$160/hr</span></div>
+      <div class="pricing-row"><span class="label">Bench and lab work</span><span class="amount">$120/hr</span></div>
+      <div class="pricing-row"><span class="label">Minimum engagement</span><span class="amount">$500</span></div>
+      <div class="pricing-row"><span class="label">Rush service — next business day</span><span class="amount">+40%</span></div>
+      <div class="pricing-row"><span class="label">Rush service — same day</span><span class="amount">+75%</span></div>
+    </div>
+    <p class="pricing-note">1-hour minimum, 0.5-hour increments. 50% deposit required for first-time customers or quotes over $1,000.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>Common Questions</h2>
+    <details>
+      <summary>What information do you need to start?</summary>
+      <p>A brief description of the failure and what the board is supposed to do. Schematics, photos, and any known symptoms help speed up the process but are not required to get a quote. Send what you have.</p>
+    </details>
+    <details>
+      <summary>What if you can't find the root cause?</summary>
+      <p>That happens. If the root cause is inconclusive after a reasonable investigation we tell you clearly, explain what was found, and describe what additional testing would be needed to resolve it. You only pay for the work performed.</p>
+    </details>
+    <details>
+      <summary>Do you work with companies outside your area?</summary>
+      <p>Yes. J-Tech LabWorks operates on a ship-in model and works with engineering teams nationwide. You ship hardware and documentation, we do the work, and results come back fast.</p>
+    </details>
+    <details>
+      <summary>Will you sign an NDA?</summary>
+      <p>Absolutely. NDA-friendly by default. Happy to sign yours or provide ours before you send files or hardware.</p>
+    </details>
+    <details>
+      <summary>How many units should I send?</summary>
+      <p>For most failure analysis engagements one to three units is enough. A known-good unit for comparison is helpful when available but not required. Send what you have and we will work with it.</p>
+    </details>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>What Engineers Say</h2>
+    <div style="background:var(--bg3); border:1px solid var(--border); border-left: 3px solid var(--blue); border-radius:8px; padding:2rem; position:relative;">
+      <div style="font-size:3rem; color:var(--blue); opacity:0.2; position:absolute; top:1rem; left:1.5rem; font-family:Georgia,serif; line-height:1;">&ldquo;</div>
+      <p style="font-size:1rem; color:var(--text); line-height:1.8; margin:0 0 1.5rem; padding-left:1rem;">
+        Jerry was a critical contributor during my time at Sleep Number, working in the R&amp;D department. His attention to detail with test fixtures, ability to quickly assemble and bring up PCBAs, and troubleshoot PCBs in the prototype phase through to production was essential for the launch of the Climate 360 platform. Jerry's impact on the team was a significant factor toward meeting the expected launch date and ensuring a smooth production run.
+      </p>
+      <div style="padding-left:1rem;">
+        <div style="font-family:'Orbitron',sans-serif; font-size:0.8rem; color:#fff; font-weight:600;">Jacob W.</div>
+        <div style="font-size:0.78rem; color:var(--text-dim);">Electrical Engineer</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>About J-Tech LabWorks</h2>
+    <div class="about-inner">
+      <p>J-Tech LabWorks is a <strong>contract electronics lab</strong> serving hardware engineering teams nationwide, specializing in failure analysis, PCB bring-up, embedded debug, signal and power integrity, and NPI support.</p>
+      <p>Founded and run by Jerry Anderson, a hands-on electronics professional with <strong>22 years of experience</strong> supporting R&amp;D, product development, validation, and sustaining work at Fortune 500 consumer electronics companies and medical device manufacturers including Starkey Hearing Technologies and Intricon. Current contract work includes R&amp;D support for Sleep Number.</p>
+      <p>Practical, execution-first support with clear communication and fast turnaround. NDA-friendly by default. Ship-in model, works nationwide.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="contact" style="text-align:center;">
+    <h2 style="justify-content:center;">Get a Quote</h2>
+    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:1.5rem;">
+      Send a brief description of the failure and we will confirm details, provide a quote, and get to work.
+    </p>
+    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
+      <a class="btn btn--solid" href="mailto:janderson@jtechlabworks.com?subject=Failure%20Analysis%20Quote%20Request">Email Jerry</a>
+      <a class="btn btn--ghost" href="https://jtechlabworks.com/#contact">Contact Form</a>
+    </div>
+    <p style="font-size:0.85rem; color:var(--text-dim);">612-227-0195 &nbsp;&nbsp; janderson@jtechlabworks.com &nbsp;&nbsp; jtechlabworks.com</p>
+  </section>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.process-item, .problem-item, .equip-item, .step').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(16px)';
+      el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+      observer.observe(el);
+    });
+  </script>
+
+  <footer>
+    &copy; 2026 J-TECH LABWORKS — All Rights Reserved &nbsp;&middot;&nbsp;
+    <a href="https://jtechlabworks.com">jtechlabworks.com</a>
+    &nbsp;&middot;&nbsp;
+    <a href="mailto:janderson@jtechlabworks.com">janderson@jtechlabworks.com</a>
+    &nbsp;&middot;&nbsp;
+    612-227-0195
+  </footer>
+
+</body>
+</html>
